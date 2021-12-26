@@ -1,6 +1,7 @@
 # ቀጣሪ -  Connecting people with businesses
 
 ![logo](assets/logo/ቀጣሪ-logos_white_readme.png)
+![homepage](assets/homepage.png)
 
 
 ---
