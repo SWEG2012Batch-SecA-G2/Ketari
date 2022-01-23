@@ -1,150 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ቀጣሪ</title>
-    <link rel="shortcut icon" type="x-icon" href="ቀጣሪ-logos_black.png">
-</head>
-<body>
-    <!-- header table -->
-    <table  width="100%" cellpadding="0" cellspacing="0" bgcolor="#fefefe">
-        <tr>
-             <td>
-                 <table width="100%" cellpadding="0" cellspacing="0" > 
-                 <tr>
-                     <!-- This is the logo cell -->
-                        <td width="10%">
-                            <a href="#">
-                            <img src="assets\logo\ቀጣሪ-logos_transparent.png" alt="" height="auto" width="120px">
-                            </a>
-                        </td>
-                        <td>
-                              <font face="Sans-serif" color="#3c4ec9" size="5">
-                            <strong>Ketari</strong>
-                           </font>
-                        </td>
-                        <td width="60%">&nbsp;</td>  
-                        <!-- links to login page -->
-                        <td align="center"><a href="signin.html">
-                            <font face="arial" color="#3c4ec9" size="5">
-                         Log in  
-                         </font></a>
-                        </td>
-                        <!-- links to sign up page -->
-                        <td align="center"><a href="signup.html">
-                            <font face="Sans-serif" color="#3c4ec9" size="5">
-                         Sign up
-                         </font></a>
-                        </td>
-                        <!-- links to login page -->
-                        <td align="center"><a href="about.html">
-                            <font face="arial" color="#3c4ec9" size="5">
-                         About  
-                         </font></a>
-                         <!-- links to login page -->
-                        <td align="center"><a href="FAQ.html">
-                            <font face="arial" color="#3c4ec9" size="5">
-                         FAQs  
-                         </font></a>
-                 </tr>
-                 </table>
-             </td>
-        </tr>
-      </table>
-      <!-- End Header -->
+    <link rel="shortcut icon" type="x-icon" href="ቀጣሪ-logos_black.png" />
+    <link rel="stylesheet" href="./src/styles/landing.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <div class="nav-bar">
+      <div class="Logo-section">
+        <img
+          class="img-logo"
+          src="assets\logo\ቀጣሪ-logos_white.png"
+          alt=""
+          height="auto"
+          width="120px"
+        />
+        <a class="ketari" href="#">Ketari</a>
+      </div>
+      <div class="nav-bar-links">
+        <a class="links" href="signin.html">Log in</a>
+        <a class="links" href="signup.html">Sign in</a>
+        <a class="links" href="FAQ.html">FAQ</a>
+        <a class="links" href="about.html">About us</a>
+      </div>
+    </div>
+    <!-- Navigation bar End -->
 
-      <!-- Content table  -->
+    <div class="content-container">
+      <div class="sec" data-aos="fade-in" data-aos-duration="1000">
+        <div>
+          <h2>Find a Job. Get Hired.</h2>
 
-      <table cellpadding="20" width="100%">
-        <tr>
-            <td >
-                <!-- Inner table inorder to place contents individually  -->
-                <!-- add ' border="1px black" ' as table attribute to see how the layout works -->
-                <table cellpadding="20" > 
-                    <!-- first row--basic description  -->
-                    <tr>
-                        <td width="10%">&nbsp;</td> 
-                        <td width="29%" rowspan="2">
-                            <h1> Find a Job. Get Hired. <h1> 
-                            <h2>Ketari is a free job application platform that will help you find your dream job. Helps us get you, to where you want to be and start earning!<h2>
-                        </td>
-                        <td width="10%">&nbsp;</td> 
-                        <td rowspan="2">
-                            <img src="assets/illustrations/interview.png" alt="" height="400px" width="auto">
-                        </td>
-                    </tr>
-                     <!-- Space between rows -->
-                    <tr>
-                        <td width="20%">&nbsp;</td> 
-                    </tr>
-                    <tr>
-                       <td ></td>
-                    </tr>
-                    <!-- second row -- create an account prompt -->
-                    <tr>
-                        <td width="20%">&nbsp;</td> 
-                        <td>
-                            <img src="assets/illustrations/fillprofile.svg" alt="" height="200px" height="auto">
-                        </td>
-                        <td width="10%">&nbsp;</td> 
-                        <td>
-                            <h2>Create an account</h2>
-                            <h3>Create a free account to keep up to date with the latest job opportunities.</h3>
-                        </td>
-                    </tr>
-                     <!-- Space between rows -->
-                    <tr>
-                        <td ></td>
-                     </tr>
-                     <!-- Third row -- fill out form prompt -->
-                    <tr>
-                        <td width="20%">&nbsp;</td> 
-                        <td>
-                            <h2>Fill out your profile</h2>
-                            <h3>Fill out your pofile and upload your CV or resume files in quick and easy steps</h3>
-                        </td>
-                        <td width="10%">&nbsp;</td> 
-                        <td>
-                            <img src="assets/illustrations/uploadfiles.svg" alt="" height="200px" height="auto">
-                        </td>
-                    </tr>
-                    <!-- Space between rows -->
-                    <tr>
-                        <td ></td>
-                     </tr>
-                    <!-- fourth row --start earning -->
-                    <tr>
-                        <td width="20%">&nbsp;</td> 
-                        <td>
-                            <img src="assets/illustrations/startearning.svg" alt="" height="200px" height="auto">
-                        </td>
-                        <td width="10%">&nbsp;</td> 
-                        <td>
-                            <h1>Find your dream job and start earning!</h1>
-                        </td>
-                    </tr>
-                    <!-- Fifth row --get started -->
-                    <tr>
-                        <table  width="100%" cellpadding="30">
-                            <tr>
-                                <!-- Links to sign up page -->
-                                <td align="center" width="100%"><a href="signup.html"><h1>Get Started</h1></a></td>
-                            </tr>
-                        </table>
-                    </tr>
+          <h3>
+            Ketari is a free job application platform that will help you find
+            your dream job. Helps us get you, to where you want to be and start
+            earning!
+          </h3>
+        </div>
+        <img
+          class="img-interview"
+          src="assets/illustrations/interview-svg.svg"
+          alt=""
+          height="400px"
+          width="auto"
+        />
+      </div>
 
-                </table>
-            </td>
-        </tr>
-
-    </table>
-         <!-- Footer -->
-    <table width="100%">
-        <tr height="10px">
-            <td align="center"> ቀጣሪ &copy; 2022 </td>
-        </tr>
-    </table>
-</body>
+      <div class="sec" data-aos="fade-left" data-aos-duration="1000">
+        <img class="images-smaller" src="assets/illustrations/fillprofile.svg" alt="" />
+        <div>
+          <h2>Create an account</h2>
+          <h3>
+            Create a free account to keep up to date with the latest job
+            opportunities.
+          </h3>
+        </div>
+      </div>
+      <div class="sec" data-aos="fade-right" data-aos-duration="1000">
+        <div>
+          <h2>Fill out your profile</h2>
+          <h3>
+            Fill out your pofile and upload your CV or resume files in quick and
+            easy steps
+          </h3>
+        </div>
+        <img
+          class="images-smaller"
+          src="assets/illustrations/uploadfiles.svg"
+          alt=""
+        />
+      </div >
+      
+      <img data-aos="fade-up" data-aos-duration="1000"
+        class="images-smaller"
+        src="assets/illustrations/startearning.svg"
+        alt=""
+      />
+      <h2>Find your dream job and start earning!</h2>
+      <a class="get-str" href="signup.html">Get Started</a>
+      <div class="copy">ቀጣሪ &copy; 2022</div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

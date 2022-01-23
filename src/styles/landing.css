@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,400&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: normal;
+}
+body {
+  padding: 0%;
+  margin: 0%;
+  background-color: whitesmoke;
+}
+
+/* Nav Bar logo */
+.img-logo {
+  height: 9vh;
+  width: auto;
+}
+/* Logo and ketari alignment */
+.Logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.ketari {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: sticky;
+  background-color: rgb(26, 15, 94);
+  top: 0;
+}
+
+
+/* navigation bar links section  */
+.nav-bar-links {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+.links {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: min(1.9vw,1.5rem);
+  border-right: 2px solid whitesmoke;
+  padding-right: 3vw;
+  justify-self: center;
+}
+
+.links::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: #e0e1eb;
+  transition: all 0.5s;
+  left: 20px;
+}
+
+.links:hover::after {
+  width: 100%;
+}
+
+/* main content */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* images  */
+.images-smaller {
+  width: 25vw;
+  height: auto;
+}
+.img-interview {
+  width:   clamp(150px, 50vw, 40vw );
+  height: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.sec {
+  /* border: solid 1px black; */
+  margin-top: 200px;
+  padding: 9vh 1.5rem;
+  width: 80%;
+  justify-self: center;
+  display: flex;
+  margin-top: 5vh;
+  margin-bottom: 10.5vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.get-str {
+  font-size: clamp(1rem, 2rem, 3rem);
+  border-radius: 15px;
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: rgb(68, 52, 170);
+  margin: 2vh;
+  padding: 5px 25px;
+}
+
+.get-str:hover {
+  color: antiquewhite;
+  background-color: rgb(26, 15, 94);
+}
+
+@media all and (max-width: 600px) {
+  .links {
+    font-size: 2.1vw;
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+  .sec {
+    padding: 0.5vh;
+    margin: 5vh;
+    flex-wrap: wrap;
+  }
+}
