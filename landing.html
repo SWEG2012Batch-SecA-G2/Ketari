@@ -11,11 +11,15 @@
   </head>
   <body>
     <!-- Navigation bar -->
+
+    <div class="world"></div>
+    <!-- <img class="world" hidden src="" alt=""> -->
+
     <div class="nav-bar">
       <div class="Logo-section">
         <img
           class="img-logo"
-          src="assets\logo\ቀጣሪ-logos_white.png"
+          src="./assets/logo/ቀጣሪ-logos_black.png"
           alt=""
           height="auto"
           width="120px"
@@ -23,50 +27,59 @@
         <a class="ketari" href="#">Ketari</a>
       </div>
       <div class="nav-bar-links">
-        <a class="links" href="signin.html">Log in</a>
-        <a class="links" href="signup.html">Sign in</a>
-        <a class="links" href="FAQ.html">FAQ</a>
-        <a class="links" href="about.html">About us</a>
+        <a class="links w-text" href="signin.html">Log in</a>
+        <a class="links w-text" href="signup.html">Sign up</a>
+        <a class="links w-text" href="FAQ.html">FAQ</a>
+        <a class="links w-text" href="about.html">About us</a>
       </div>
     </div>
     <!-- Navigation bar End -->
 
+    <!-- main content  -->
     <div class="content-container">
-      <div class="sec" data-aos="fade-in" data-aos-duration="1000">
-        <div>
-          <h2>Find a Job. Get Hired.</h2>
+      <!-- first section  -->
+      <div class="sec-1" data-aos="fade-in" data-aos-duration="1000">
+        <div class="cta-container">
+          <h2 class="w-text">Find a Job. Get Hired.</h2>
 
-          <h3>
+          <h3 class="w-text on-black">
             Ketari is a free job application platform that will help you find
-            your dream job. Helps us get you, to where you want to be and start
-            earning!
+            your dream job. Find Jobs that match your interests with us. Helps
+            us get you, to where you want to be and start earning!
           </h3>
+          <div class="cta-links-container">
+            <a href="signin.html" class="cta-links">Log in</a>
+            <a href="signup.html" class="cta-links">Sign up</a>
+          </div>
         </div>
-        <img
-          class="img-interview"
-          src="assets/illustrations/interview-svg.svg"
-          alt=""
-          height="400px"
-          width="auto"
-        />
       </div>
+      <!-- end of first section  -->
 
+      <!-- second section -- first card  -->
       <div class="sec" data-aos="fade-left" data-aos-duration="1000">
-        <img class="images-smaller" src="assets/illustrations/fillprofile.svg" alt="" />
+        <img
+          class="images-smaller"
+          src="assets/illustrations/fillprofile.svg"
+          alt=""
+        />
         <div>
           <h2>Create an account</h2>
           <h3>
-            Create a free account to keep up to date with the latest job
-            opportunities.
+            If you do not have your account, please register first so you can
+            enter and look for work. Create a free account to keep up to date
+            with the latest job opportunities.
           </h3>
         </div>
       </div>
+      <!-- end of second section  -->
+      <!-- third section  -->
       <div class="sec" data-aos="fade-right" data-aos-duration="1000">
         <div>
           <h2>Fill out your profile</h2>
           <h3>
             Fill out your pofile and upload your CV or resume files in quick and
-            easy steps
+            easy steps. You can find your dream job accodrding to your abilities
+            and passion.
           </h3>
         </div>
         <img
@@ -74,14 +87,16 @@
           src="assets/illustrations/uploadfiles.svg"
           alt=""
         />
-      </div >
-      
-      <img data-aos="fade-up" data-aos-duration="1000"
+      </div>
+      <!-- end of third section  -->
+      <img
+        data-aos="fade-up"
+        data-aos-duration="1000"
         class="images-smaller"
         src="assets/illustrations/startearning.svg"
         alt=""
       />
-      <h2>Find your dream job and start earning!</h2>
+      <h2 class="sub-title">Find your dream job and start earning!</h2>
       <a class="get-str" href="signup.html">Get Started</a>
       <div class="copy">ቀጣሪ &copy; 2022</div>
     </div>

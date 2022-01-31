@@ -7,9 +7,15 @@
   font-weight: normal;
 }
 body {
+
   padding: 0%;
   margin: 0%;
-  background-color: whitesmoke;
+  background-color: rgb(233, 227, 227);
+}
+:root {
+  --fs-400: 1.5rem
+  --fs-600: 2rem
+  --fs-xl: 2.5rem 
 }
 
 /* Nav Bar logo */
@@ -23,10 +29,21 @@ body {
   align-items: center;
 }
 
+
+
+.world {
+  background: url(../../assets/worldmap.svg) no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -200;
+}
+
 .ketari {
-  color: whitesmoke;
+  color: rgb(250, 250, 250);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem,1.9vw,1.5rem);
 }
 
 .nav-bar {
@@ -34,11 +51,9 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
-  position: sticky;
-  background-color: rgb(26, 15, 94);
+  background-color: rgba(212, 212, 212, 0);
   top: 0;
 }
-
 
 /* navigation bar links section  */
 .nav-bar-links {
@@ -48,15 +63,18 @@ body {
 }
 
 .links {
-  color: whitesmoke;
+  color: rgb(223, 221, 241);
   text-decoration: none;
   cursor: pointer;
-  font-size: min(1.9vw,1.5rem);
-  border-right: 2px solid whitesmoke;
+  font-size: clamp(0.9rem,1.9vw,1.5rem);
   padding-right: 3vw;
   justify-self: center;
 }
+.w-text {
+  color:rgb(206, 206, 206);
+}
 
+/* Underline hover effect for links */
 .links::after {
   content: "";
   display: block;
@@ -70,6 +88,26 @@ body {
 .links:hover::after {
   width: 100%;
 }
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 50px;
+}
+
+.cta-links{
+  text-decoration: none;
+  color:aliceblue;
+  padding: 1rem 3rem;
+  font-size: clamp(4,1.5vw, 40px);
+  margin-top: 10px;
+}
+.cta-links:last-child {
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 35px;
+}
 
 /* main content */
 .content-container {
@@ -80,27 +118,29 @@ body {
   align-items: center;
 }
 
+
 /* images  */
 .images-smaller {
   width: 25vw;
   height: auto;
 }
-.img-interview {
-  width:   clamp(150px, 50vw, 40vw );
-  height: auto;
-}
 
+/* Formatting text in headers */
 h2 {
   font-size: 2.5rem;
   font-weight: 600;
+  text-align: center;
 }
 
 h3 {
   font-size: 1.5rem;
 }
+.on-black {
+  text-align: center;
+  font-weight: 700;
+}
 
-.sec {
-  /* border: solid 1px black; */
+.sec-1 {
   margin-top: 200px;
   padding: 9vh 1.5rem;
   width: 80%;
@@ -112,14 +152,38 @@ h3 {
   align-items: center;
 }
 
+/* card contect  */
+.sec {
+  background-color: rgb(235, 233, 233);
+  /* border: solid 1px rgb(202, 202, 202); */
+  margin-top: 200px;
+  padding: 9vh 1.5rem;
+  width: 80%;
+  justify-self: center;
+  display: flex;
+  margin-top: 5vh;
+  margin-bottom: 10.5vh;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sec:hover {
+  transform: scale(0.1);
+}
+
+
+/* Get started button  */
 .get-str {
-  font-size: clamp(1rem, 2rem, 3rem);
+  font-size: clamp(4,1.5vw, 40px);
   border-radius: 15px;
   text-decoration: none;
   color: antiquewhite;
-  background-color: rgb(68, 52, 170);
+  background-color: rgb(52, 64, 170);
   margin: 2vh;
-  padding: 5px 25px;
+  padding: 15px 25px;
 }
 
 .get-str:hover {
@@ -127,10 +191,12 @@ h3 {
   background-color: rgb(26, 15, 94);
 }
 
+
+/* media query for smaller screens */
 @media all and (max-width: 600px) {
-  .links {
+  /* .links {
     font-size: 2.1vw;
-  }
+  } */
   h2 {
     font-size: 1rem;
     font-weight: 600;
@@ -138,9 +204,10 @@ h3 {
   h3 {
     font-size: 0.8rem;
   }
-  .sec {
+  .sec-1 {
     padding: 0.5vh;
     margin: 5vh;
     flex-wrap: wrap;
+    margin-bottom: 10px;
   }
 }
