@@ -22,8 +22,9 @@ body {
 
 /* Nav Bar logo */
 .img-logo {
-  height: 9vh;
+  height: 6vh;
   width: auto;
+  padding: 10px;
 }
 /* Logo and ketari alignment */
 .Logo-section {
@@ -34,7 +35,7 @@ body {
 
 
 .world {
-  background: url(../../assets/worldmap.svg) no-repeat;
+  background: url(../../assets/illustrations/landing/WORLDMAP1.svg) no-repeat;
   background-size: cover;
   height: 90vh;
   width: 100vw;
