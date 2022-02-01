@@ -126,8 +126,13 @@ nav  li a {
 }
 
 #searchBotton:hover {
+    color: black;
     background-color: #e45d74;
+}
 
+#searchBotton:hover button{
+    color: black;
+    background-color: #e45d74;
 }
 
 #searchBotton button {
@@ -140,7 +145,7 @@ nav  li a {
 }
 
 
-/* */
+/* Job Listings */
 
 #jobListings {
     /*display: flex;
@@ -153,9 +158,9 @@ nav  li a {
     padding-top: 20px;
     background-color: #d9dfec1e;
     color: black;
-    margin: 80px 16%;
+    margin: 80px 20% 80px 19%;
     margin-bottom: 100px;
-    background-color: #cf566a04;
+    background-color: #3d4b7805;
 }
 
 #jobsTitle  {
@@ -176,7 +181,7 @@ nav  li a {
 
 #eachJob {
     height: 100px;
-    width: 88%;
+    width: 87%;
     background-color: #d9dfeca2;
     border-radius: 20px;
     padding: 10px 30px 10px 10px;
@@ -207,3 +212,71 @@ nav  li a {
 #jobTitle {
     margin-bottom: 6px;
 }
+
+
+/* Job Types and Roles */
+#jobTypeAndRole {
+    width: 14vw;
+    float: left;
+    color: black;
+    margin: 85px 2%;
+}
+
+/* Job Types */
+#jobTypes {
+    width: 80%;
+    margin-bottom: 12%;
+    border-radius: 20px;
+    padding: 20px 4% 40px 25%;
+    background-color: #3d4b7805;
+}
+
+#jobTypes:hover, #jobRoles:hover {
+    background-color: #3d4b7810;
+}
+
+#jobTypeTitle {
+    font-size: 26px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+#jobTypeAndRole h6{
+    font-size: 18px;
+}
+
+#jobTypeAndRole input{
+    float: left;
+    margin-top: 6px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+/* Job Roles */
+#jobRoles {
+    width: 90%;
+    border-radius: 20px;
+    background-color: #3d4b7805;
+    padding: 20px 4% 40px 14%;
+}
+
+#jobRoleTitle {
+    font-size: 26px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+/* Footer */
+footer {
+    padding-top: 10px;
+    height: 4vh;
+    text-align: center;
+    background-color: #28376a;
+}
+
+
+
+
+
+
+
