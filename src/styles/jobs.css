@@ -232,7 +232,7 @@ nav  li a {
     background-color: #3d4b7805;
 }
 
-#jobTypes:hover, #jobRoles:hover {
+#jobTypes:hover, #jobRoles:hover, #emailSubscription:hover, #recentSearches:hover {
     background-color: #3d4b7810;
 }
 
@@ -306,6 +306,16 @@ nav  li a {
     background-color: #cf566a;
 }
 
+#emailSubscription button:hover {
+    background-color: #e45d74;
+}
+
+#emailSubscription button:hover {
+    color: black;
+    background-color: #e45d74;
+}
+
+
 #recentSearches {
     border-radius: 20px;
     padding: 20px 40px 40px 40px;
@@ -323,6 +333,12 @@ nav  li a {
 #recentSearches h4 {
     margin-left: 25%;
 }
+
+#recentSearches h4:hover {
+    color: #cf566a;
+}
+
+
 
 
 /* Footer */
