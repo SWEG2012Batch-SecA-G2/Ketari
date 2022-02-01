@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/styles/regstyle.css">
+</head>
+<body>
+    <div class="container">  
+        <form id="contact" action="" method="post">
+          <h3>Registration Form</h3>
+          <fieldset>
+            <input placeholder="Your country" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Job Title" type="text" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Web Site (optional)" type="url" tabindex="4">
+          </fieldset>
+          <fieldset>
+            <div>
+                Male
+                <input type="radio" tabindex="4" name="gender">
+                Female
+                <input type="radio" tabindex="4" name="gender">
+            </div>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="A little discription about what you do...." tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+</body>
+</html>
