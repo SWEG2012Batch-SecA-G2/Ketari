@@ -193,6 +193,12 @@ h3 {
   color: antiquewhite;
   background-color: rgb(26, 15, 94);
 }
+footer {
+  padding-top: 10px;
+  height: 6vh;
+  text-align: center;
+  background-color: #28376a;
+}
 
 
 /* media query for smaller screens */
