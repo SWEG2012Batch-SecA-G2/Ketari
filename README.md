@@ -1,4 +1,4 @@
-# [ቀጣሪ - Connecting people with businesses](https://sweg2012batch-seca-g2.github.io/Ketari/landing) 
+# [ቀጣሪ](https://sweg2012batch-seca-g2.github.io/Ketari/landing) - Connecting people with businesses
 
 
 
