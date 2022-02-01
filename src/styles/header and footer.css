@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+*:focus {
+    outline: none;
+}
+
+body {
+    color: #eeeeee;
+    background-color: #e6ecf9;
+}
+a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    margin: 5px;
+    height: 64vh;
+    border-radius: 20px;
+    border: 1px solid #28376a;
+    background-color: #28376a;
+}
+
+#logoImage {
+    width: 160px;
+    height: 50px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+nav {
+    float: right;
+    margin: 20px 25px 0px;
+    background-color: #28376a;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 30px;
+}
+
+nav li a:hover {
+    color: #cf566a;
+}
+
+
+nav  li a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#intro {
+    color: #eeeeee;
+    margin: 20vh 10vh 0vh;
+    font-size: 25px;
+    width: 45%;
+}
+
+#intro p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#bannerImage {
+    float: right;
+    width: 420px;
+    margin-top: -260px;
+    margin-right: 160px;
+}
+#searchIcon {
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+    margin-right: -12px;
+    float: left;
+
+}
+
+/* Footer */
+footer {
+    padding-top: 10px;
+    height: 4vh;
+    text-align: center;
+    background-color: #28376a;
+}
+
+
+
+
+
+
+

@@ -158,7 +158,7 @@ nav  li a {
     padding-top: 20px;
     background-color: #d9dfec1e;
     color: black;
-    margin: 80px 20% 80px 19%;
+    margin: 80px 24% 80px 20%;
     margin-bottom: 100px;
     background-color: #3d4b7805;
 }
@@ -181,7 +181,7 @@ nav  li a {
 
 #eachJob {
     height: 100px;
-    width: 87%;
+    width: 89%;
     background-color: #d9dfeca2;
     border-radius: 20px;
     padding: 10px 30px 10px 10px;
@@ -220,6 +220,7 @@ nav  li a {
     float: left;
     color: black;
     margin: 85px 2%;
+
 }
 
 /* Job Types */
@@ -265,6 +266,64 @@ nav  li a {
     margin-bottom: 10px;
     padding-left: 40px;
 }
+
+
+/* Email Subs And Recent Searches */
+#emailSubsAndRecentSearches {
+    float: right;
+    color: black;
+    position: absolute;
+    top: 640px;
+    right: 40px;
+    margin-bottom: 14%;
+}
+
+#emailSubscription {
+    border-radius: 20px;
+    padding: 20px 40px 40px 40px;
+    background-color: #3d4b7805;
+    margin-bottom: 8%;
+}
+#emailSubscription h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#emailSubscription input {
+    border: none;
+    border-radius: 20px;
+    width: 80%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+#emailSubscription button {
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 10px 30px;
+    margin-left: 20%;
+    border-radius: 20px;
+    background-color: #cf566a;
+}
+
+#recentSearches {
+    border-radius: 20px;
+    padding: 20px 40px 40px 40px;
+    background-color: #3d4b7805;
+
+}
+
+#recentSearches h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+#recentSearches h4 {
+    margin-left: 25%;
+}
+
 
 /* Footer */
 footer {
