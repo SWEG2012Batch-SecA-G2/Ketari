@@ -97,6 +97,7 @@
         <section id="jobListings">
             <h3 id="jobsTitle"> Jobs </h3> 
             <!-- Each Job -->
+        <!--
             <!-- Job 1 -->
             <div id="eachJob">
                 <img id="companyLogos" src="assets/icons/cbe.png">
@@ -242,5 +243,90 @@
         <footer>
             <p> Ketari &copy; 2022 All Rights Reserved! </p>
         </footer>
+
+        <script>
+        let jobs = [
+                {
+                    "logo": "assets/illustrations/femaleDev.png",
+                    "company": "Commercial Bank Of Ethiopia",
+                    "location": "Addis Ababa, Ethiopia",
+                    "jobRole": "Senior Web Developer",
+                    "jobType": "Full-Time",
+                },
+                {
+                    "logo": "assets/icons/cbe.png",
+                    "company": "Commercial Bank Of Ethiopia",
+                    "location": "Addis Ababa, Ethiopia",
+                    "jobRole": "Senior Web Developer",
+                    "jobType": "Full-Time",
+                },
+                {
+                    "logo": "assets/icons/cbe.png",
+                    "company": "Commercial Bank Of Ethiopia",
+                    "location": "Addis Ababa, Ethiopia",
+                    "jobRole": "Senior Web Developer",
+                    "jobType": "Full-Time",
+                },
+            ];
+
+            let jobListings = document.getElementById("jobListings");
+
+            function insertJobs() {
+
+                for(let i = 0; i < jobs.length; i++){
+                    // Company Logo
+                    let companyLogo = document.createElement("img");
+                    companyLogo.src = jobs[i].logo;
+                    companyLogo.id = "companyLogos";
+
+                    // Company Name
+                    let companyNameH1 = document.createElement("h1");
+                    let companyNameText = document.createTextNode(jobs[i].company);
+                    companyNameH1.appendChild(companyNameText);
+                    companyNameH1.id = "companyName";
+
+                    // Company Location
+                    let companyLocationH4 = document.createElement("h4");
+                    let companyLocationText = document.createTextNode(jobs[i].location);
+                    companyLocationH4.appendChild(companyLocationText);
+                    
+                    // Div - companyNameAndAddress
+                    let divCompanyNameAndAddress = document.createElement("div");
+                    divCompanyNameAndAddress.id = "companyNameAndAddress";
+                    divCompanyNameAndAddress.appendChild(companyNameH1);
+                    divCompanyNameAndAddress.appendChild(companyLocationH4);
+
+                    // Job Title
+                    let jobTitleH3 = document.createElement("h3");
+                    let jobTitleText = document.createTextNode(jobs[i].jobRole);
+                    jobTitleH3.appendChild(jobTitleText);
+                    jobTitleH3.id = "jobTitle";
+
+                    // Job Type
+                    let jobTypeH4 = document.createElement("h4");
+                    let jobTypeText = document.createTextNode(jobs[i].jobType);
+                    jobTypeH4.appendChild(jobTypeText);
+                    jobTypeH4.id = "jobType";
+
+
+                    // Div - jobTitleAndType
+                    let divJobTitleAndType = document.createElement("div");
+                    divJobTitleAndType.appendChild(jobTypeH3);
+                    divJobTitleAndType.appendChild(jobTypeH4);
+                    divJobTitleAndType.id = "jobTitleAndType";
+
+                    // Div
+                    let div = document.createElement("div");
+                    div.id = "eachJob";
+                    div.appendChild(companyLogo);
+                    div.appendChild(divCompanyNameAndAddress);
+                    div.appendChild(divJobTitleAndType);
+
+
+                    document.getElementById("jobListings").appendChild(div);
+                }
+            }
+            window.onload = insertJobs();
+        </script>
     </body>
 </html>
