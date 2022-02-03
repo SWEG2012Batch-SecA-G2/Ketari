@@ -14,15 +14,10 @@ body {
   margin: 0%;
   background-color: rgb(233, 227, 227);
 }
-:root {
-  --fs-400: 1.5rem
-  --fs-600: 2rem
-  --fs-xl: 2.5rem 
-}
 
 /* Nav Bar logo */
 .img-logo {
-  height: 6vh;
+  height: 8vh;
   width: auto;
   padding: 10px;
 }
@@ -37,8 +32,11 @@ body {
 .world {
   background: url(../../assets/illustrations/landing/WORLDMAP1.svg) no-repeat;
   background-size: cover;
+  border-radius: 15px;
+  filter: blur(3px);
+  margin: 5px;
   height: 90vh;
-  width: 100vw;
+  width: 99.5%;
   position: absolute;
   z-index: -200;
 }
@@ -61,7 +59,7 @@ body {
 /* navigation bar links section  */
 .nav-bar-links {
   display: flex;
-  width: 40%;
+  width: 30%;
   justify-content: space-evenly;
 }
 
@@ -77,20 +75,11 @@ body {
   color:rgb(206, 206, 206);
 }
 
-/* Underline hover effect for links */
-.links::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 0;
-  background: #e0e1eb;
-  transition: all 0.5s;
-  left: 20px;
+
+.links:hover {
+  color: #cf566a;
 }
 
-.links:hover::after {
-  width: 100%;
-}
 .cta-container {
   display: flex;
   flex-direction: column;
@@ -106,13 +95,28 @@ body {
   font-size: clamp(4,1.5vw, 40px);
   margin-top: 10px;
 }
+
+.cta-links:first-child {
+  background-color: #cf5468;
+  border-radius: 35px;
+}
+
 .cta-links:last-child {
   color: black;
   background-color: whitesmoke;
   border-radius: 35px;
 }
 
+.cta-links:last-child:hover {
+  background-color: rgb(170, 166, 166);
+}
+
+.cta-links:first-child:hover {
+  background-color: #b4495b;
+}
+
 /* main content */
+
 .content-container {
   display: flex;
   flex-direction: column;
@@ -121,10 +125,9 @@ body {
   align-items: center;
 }
 
-
 /* images  */
 .images-smaller {
-  width: 25vw;
+  width: max(15vw,150px);
   height: auto;
 }
 
@@ -160,12 +163,12 @@ h3 {
   background-color: rgb(235, 233, 233);
   /* border: solid 1px rgb(202, 202, 202); */
   margin-top: 200px;
-  padding: 9vh 1.5rem;
+  padding: 4vh 1.5rem;
   width: 80%;
   justify-self: center;
   display: flex;
-  margin-top: 5vh;
-  margin-bottom: 10.5vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
@@ -192,6 +195,12 @@ h3 {
 .get-str:hover {
   color: antiquewhite;
   background-color: rgb(26, 15, 94);
+}
+footer {
+  padding-top: 10px;
+  height: 6vh;
+  text-align: center;
+  background-color: #28376a;
 }
 
 
