@@ -29,7 +29,7 @@ a {
 }
 
 /* Header */
-header {
+/* header {
     margin: 5px;
     height: 64vh;
     border-radius: 20px;
@@ -93,7 +93,7 @@ nav  li a {
     margin-right: -12px;
     float: left;
 
-}
+} */
 /* Header end */
 
 .entire-content {
