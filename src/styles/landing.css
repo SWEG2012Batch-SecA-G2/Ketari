@@ -143,29 +143,39 @@ body {
 
 .cta-button:hover {
   color: white;
-  background-color: #cf566a;
+  background-color: rgb(83, 97, 216);
+
 }
 
 
 .cta-links:first-child {
-  background-color: #cf5468;
-  border-radius: 35px;
-}
-
-.cta-links:last-child {
   color: black;
   background-color: whitesmoke;
   border-radius: 35px;
 }
 
+.cta-links:first-child:hover {
+  color: white;
+  background-color: rgb(83, 97, 216);
+
+}
+
+.cta-links:last-child {
+  color: white;
+  background-color: #cf566a;
+  border-radius: 35px;
+}
+
 .cta-links:last-child:hover {
-  background-color: rgb(170, 166, 166);
+  background-color: #f77e92;
+
 }
 
 /* Sign Up Button */
 .cta-links:first-child:hover {
   color: white;
-  background-color: #b4495b;
+  background-color: rgb(83, 97, 216);
+
 }
 
 .cta-links:first-child {
@@ -253,18 +263,20 @@ h3 {
 
 /* Get started button  */
 .get-str {
-  font-size: clamp(4,1.5vw, 40px);
-  border-radius: 15px;
+  /*font-size: clamp(4,1.5vw, 40px);*/
+  font-size: 20px;
+  border-radius: 20px;
   text-decoration: none;
   color: antiquewhite;
-  background-color: rgb(52, 64, 170);
+  background-color: rgb(83, 97, 216);
   margin: 2vh;
-  padding: 15px 25px;
+  font-weight: bold;
+  padding: 10px 40px;
 }
 
 .get-str:hover {
-  color: antiquewhite;
-  background-color: rgb(26, 15, 94);
+  color: black;
+  background-color: #f77e92;
 }
 footer {
   padding-top: 10px;
