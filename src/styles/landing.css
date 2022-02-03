@@ -11,7 +11,9 @@
 body {
   padding: 0%;
   margin: 0%;
-  background-color: rgb(233, 227, 227);
+  /*background-color: rgb(233, 227, 227);*/
+  background-color: #e6ecf9;
+
 }
 
 /* Nav Bar logo */
@@ -40,6 +42,8 @@ body {
   position: absolute;
   z-index: -200;
 }
+
+
 
 .ketari {
   color: rgb(250, 250, 250);
@@ -212,7 +216,8 @@ h3 {
 
 /* card contect  */
 .sec {
-  background-color: rgb(235, 233, 233);
+  /*background-color: rgb(235, 233, 233);*/
+  background-color: #e6ecf9;
   /* border: solid 1px rgb(202, 202, 202); */
   margin-top: 200px;
   padding: 4vh 1.5rem;
@@ -235,7 +240,9 @@ h3 {
 
 .sec:hover {
   transform: scale(0.1);
-  background-color: rgb(223, 223, 223);
+  /*background-color: rgb(223, 223, 223);*/
+  background-color: #f1f5fd;
+
 }
 
 .sec h3 {
