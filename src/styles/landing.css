@@ -73,7 +73,6 @@ body {
 }
 
 .links {
-  color: rgb(223, 221, 241);
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
@@ -84,6 +83,7 @@ body {
 }
 .w-text {
   color:rgb(206, 206, 206);
+  color: white;
 }
 
 
@@ -261,6 +261,7 @@ footer {
   height: 6vh;
   text-align: center;
   background-color: #28376a;
+  color: white;
 }
 
 
