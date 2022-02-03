@@ -5,11 +5,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
+  /*font-family: "Roboto Condensed", sans-serif;*/
   font-weight: normal;
 }
 body {
-
   padding: 0%;
   margin: 0%;
   background-color: rgb(233, 227, 227);
@@ -30,10 +29,11 @@ body {
 
 
 .world {
-  background: url(../../assets/illustrations/landing/WORLDMAP1.svg) no-repeat;
+  /*background: url(../../assets/illustrations/landing/WORLDMAP1.svg) no-repeat;*/
+  background-color: #28376a;
   background-size: cover;
   border-radius: 15px;
-  filter: blur(3px);
+  /*filter: blur(3px);*/
   margin: 5px;
   height: 90vh;
   width: 99.5%;
@@ -51,24 +51,35 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);*/
   background-color: rgba(212, 212, 212, 0);
   top: 0;
+  position: sticky;
+  top: 10px;
+  left: 0px;
+  right: 0px;
+  margin: 0px 5px;
+  border-radius: 20px;
+  background-color: #28376a;
+  opacity: 0.95;
+  z-index: 9999;
 }
 
 /* navigation bar links section  */
 .nav-bar-links {
   display: flex;
-  width: 30%;
+  width: 20%;
   justify-content: space-evenly;
 }
 
 .links {
   color: rgb(223, 221, 241);
   text-decoration: none;
+  font-weight: bold;
   cursor: pointer;
-  font-size: clamp(0.9rem,1.9vw,1.5rem);
-  padding-right: 3vw;
+  /*font-size: clamp(0.9rem,1.9vw,1.5rem);*/
+  font-size: 20px;
+  padding-right: 0px;
   justify-self: center;
 }
 .w-text {
@@ -84,17 +95,51 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  margin-bottom: 50px;
+  float: left;
+  width: 55vw;
+  margin-left: 20px;
+  margin-bottom: 0px;
 }
+
+#bannerImage {
+  margin-right: 80px;
+}
+#bannerImage img{
+  width: 600px;
+}
+
 
 .cta-links{
   text-decoration: none;
   color:aliceblue;
-  padding: 1rem 3rem;
+  padding: 12px 50px;
   font-size: clamp(4,1.5vw, 40px);
   margin-top: 10px;
 }
+
+.cta-links:hover {
+  color: white;
+  background-color: #cf566a;
+}
+
+.cta-container h2{
+  margin-bottom: 0px;
+}
+
+.cta-container h3{
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  color: white;
+  background-color: #cf566a;
+}
+
 
 .cta-links:first-child {
   background-color: #cf5468;
@@ -111,8 +156,14 @@ body {
   background-color: rgb(170, 166, 166);
 }
 
+/* Sign Up Button */
 .cta-links:first-child:hover {
+  color: white;
   background-color: #b4495b;
+}
+
+.cta-links:first-child {
+  margin-top: 50px;
 }
 
 /* main content */
@@ -147,15 +198,13 @@ h3 {
 }
 
 .sec-1 {
-  margin-top: 200px;
-  padding: 9vh 1.5rem;
-  width: 80%;
+  padding: 7vh 1.5rem;
+  width: 100%;
   justify-self: center;
   display: flex;
-  margin-top: 5vh;
-  margin-bottom: 10.5vh;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 /* card contect  */
@@ -171,13 +220,24 @@ h3 {
   margin-bottom: 2vh;
   justify-content: space-between;
   align-items: center;
+  text-align: start;
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.sec img {
+  margin-right: 60px;
+}
+
 .sec:hover {
   transform: scale(0.1);
+  background-color: rgb(223, 223, 223);
+}
+
+.sec h3 {
+  text-align: center;
+  padding: 0px 60px;
 }
 
 
