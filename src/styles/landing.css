@@ -95,14 +95,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  float: left;
   width: 55vw;
-  margin-left: 20px;
-  margin-bottom: 0px;
+  margin-left: 70px;
+  margin-right: -100px;
+  margin-top: -20px;
+  z-index: 9999;
 }
 
 #bannerImage {
   margin-right: 80px;
+
 }
 #bannerImage img{
   width: 600px;
@@ -164,6 +166,7 @@ body {
 
 .cta-links:first-child {
   margin-top: 50px;
+  margin-right: 10px;
 }
 
 /* main content */
