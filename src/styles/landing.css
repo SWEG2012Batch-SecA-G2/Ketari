@@ -164,20 +164,23 @@ h3 {
   /* border: solid 1px rgb(202, 202, 202); */
   margin-top: 200px;
   padding: 4vh 1.5rem;
-  width: 80%;
+  width: 70%;
   justify-self: center;
   display: flex;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sec:hover {
-  transform: scale(0.1);
+  transform: scale(1.05);
+  transition-duration: 0.7s ;
+  transition-timing-function: ease-out;
+  
 }
 
 
