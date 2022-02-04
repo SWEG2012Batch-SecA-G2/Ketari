@@ -96,3 +96,11 @@ details summary{
 details summary:hover {
     color: #cf566a;
 }
+
+footer {
+    padding-top: 10px;
+    height: 8vh;
+    text-align: center;
+    background-color: #28376a;
+    color: #eeeeee;
+}
