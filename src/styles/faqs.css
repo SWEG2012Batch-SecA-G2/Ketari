@@ -98,9 +98,16 @@ details summary:hover {
 }
 
 footer {
-    padding-top: 10px;
-    height: 8vh;
-    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
     background-color: #28376a;
-    color: #eeeeee;
+    color: white;
+    text-align: center;
+}
+footer p{
+    padding-top: 10px;
 }
