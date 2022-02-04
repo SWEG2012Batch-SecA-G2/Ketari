@@ -192,7 +192,7 @@ header {
   flex-direction: column;
   width: 90%;
   box-sizing: border-box;
-  border: #28376a 1px solid;
+  /* border: #28376a 1px solid; */
   /* border: 1px solid black; */
   margin: 30px 0px 30px 0px;
 
