@@ -14,11 +14,6 @@
   font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
 }
-:root {
-  --fs-400: 1.5rem;
-  --fs-600: 2rem;
-  --fs-xl: 100px; 
-}
 body {
     /* color: #eeeeee; */
     background-color: #e6ecf9;
@@ -28,74 +23,90 @@ a {
     text-decoration: none;
 }
 
-/* Header */
 header {
-    margin: 5px;
-    height: 64vh;
-    border-radius: 20px;
-    border: 1px solid #28376a;
-    background-color: #28376a;
+  width: 100%
 }
 
-#logoImage {
-    width: 160px;
-    height: 50px;
-    float: left;
-    margin-top: 15px;
-    margin-left: 10px;
+.header-container {
+  height: 90vh;
+  background-color: #28376a;
+  margin: 0px 10px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
-nav {
-    float: right;
-    margin: 20px 25px 0px;
-    background-color: #28376a;
+/* Nav Bar logo */
+.img-logo {
+  height: 70px;
+  width: auto;
 }
-
-nav li {
-    list-style: none;
-    display: inline;
-    margin-right: 30px;
-}
-
-nav li a:hover {
-    color: #cf566a;
+/* Logo and ketari alignment */
+.Logo-section {
+  display: flex;
+  align-items: center;
 }
 
 
-nav  li a {
-    font-size: 18px;
-    font-weight: bold;
+.ketari {
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+  font-size: clamp(0.9rem,1.9vw,1.5rem);
 }
 
-
-#intro {
-    color: #eeeeee;
-    margin: 20vh 10vh 0vh;
-    font-size: 25px;
-    width: 45%;
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  background-color: #28376a;
+  top: 0;
+  margin: 10px 10px 0px 10px;
+  width: (99% - 2px);
+  justify-self: center;
+  border-radius: 10px 10px 0px 0px;
+  position: sticky;
+  z-index: 9999;
 }
 
-#intro p {
-    margin-top: 20px;
-    font-size: 20px;
+/* navigation bar links section  */
+.nav-bar-links {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
 }
 
-#bannerImage {
-    float: right;
-    width: max(420px, 20%);
-    height: auto;
-    margin-top: -260px;
-    margin-right: 160px;
+.links {
+  color: rgb(223, 221, 241);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: clamp(0.9rem,1.9vw,1.5rem);
+  padding-right: 3vw;
+  justify-self: center;
 }
-#searchIcon {
-    width: 25px;
-    height: 25px;
-    margin-top: 4px;
-    margin-right: -12px;
-    float: left;
+.links:hover {
+  color: #cf566a;
+}
 
+.cta {
+  display: flex;
+  align-items: center;
 }
-/* Header end */
+
+.text-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  margin: 2rem;
+}
+
+.w-text {
+  color: whitesmoke;
+}
+
+.banner-image {
+  width: 50%;
+  height: auto;
+}
 
 .entire-content {
   display: flex;
@@ -112,6 +123,9 @@ nav  li a {
   width: 90%;
   box-sizing: border-box;
   border: #28376a 1px solid;
+  border: 1px solid black;
+  margin: 30px 0px 30px 0px;
+
 }
 
 .box {
@@ -122,16 +136,10 @@ nav  li a {
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 26rem);
+  grid-template-columns: repeat(auto-fit, 26rem);
+  align-items: normal;
+  justify-content: center;
 }
-/* 
-.span-2 {
-  grid-column: span 2;
-  /* border: 1px solid black; */
-  /* padding: 20px;
-  margin: 20px;
-  font-size: val(--fs-xl);
-} */ 
 
 .cards {
   line-height:30px;
@@ -152,7 +160,7 @@ nav  li a {
   transition: all 0.4s ease-out;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
     top: -5px;
-    border: 1px solid #cccccc;
+    /* border: 1px solid #cccccc; */
     background-color:#e6ecf9;
 }
 .tc {
@@ -164,28 +172,38 @@ nav  li a {
 
 .t-section {
   width: 90%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin: 30px 0px 30px 0px;
 }
 
-.flex-container {
-  display: flex;
+.grid-container {
+  display: grid;
   flex-direction: row;
-  width: 90%;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, 50rem);
+  border: 1px solid rgb(9, 173, 9);
 }
 
 .img-girl {
-width: 50%;
-padding: 1rem;
-margin: 5rem;
-height: auto;
+  align-self: center;
+  justify-self: center;
+  padding: 1rem;
+  margin: 5rem;
+  height: min(60vw,50vh);
+  width:auto;
+  border: 1px solid rgb(224, 85, 85);
+
 }
 
 .about-container{
   display: flex;
   flex-direction: column;
-  width: 50%;
   padding: 4rem;
   margin: 30px;
   justify-content: space-evenly;
+  border: 1px solid rgb(49, 18, 161);
+
 }
  .s-proof {
    display: flex;
@@ -230,13 +248,15 @@ span {
 
 
 /* Footer */
-footer {
+footer  {
     padding-top: 10px;
     height: 4vh;
     text-align: center;
     background-color: #28376a;
 }
-
+footer > p {
+  color: #cccccc;
+}
 
 
 
