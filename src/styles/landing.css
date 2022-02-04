@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+header , nav, #entire-content {
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 3s; /* Firefox < 16 */
+      -ms-animation: fadein 3s; /* Internet Explorer */
+       -o-animation: fadein 3s; /* Opera < 12.1 */
+          animation: fadein 3s;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -28,7 +54,7 @@ header {
 }
 
 .header-container {
-  height: 90vh;
+  height: 80vh;
   background-color: #28376a;
   margin: 0px 10px 10px 10px;
   border-radius: 0px 0px 10px 10px;
@@ -91,16 +117,60 @@ header {
   align-items: center;
 }
 
+
+/* The headline text  */
 .text-prompt {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
   margin: 2rem;
+  justify-content: space-between;
 }
 
 .w-text {
   color: whitesmoke;
+}
+
+
+.cta-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: 45%;
+}
+
+/* bad naming cta is short for call to action */
+.cta-links{
+  text-decoration: none;
+  color:aliceblue;
+  padding: 12px 50px;
+  font-size: clamp(4,1.5vw, 40px);
+  margin-top: 10px;
+}
+
+
+.cta-links:first-child {
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 35px;
+}
+
+.cta-links:first-child:hover {
+  color: white;
+  background-color: rgb(83, 97, 216);
+
+}
+
+.cta-links:last-child {
+  color: white;
+  background-color: #cf566a;
+  border-radius: 35px;
+}
+
+.cta-links:last-child:hover {
+  background-color: #f77e92;
+
 }
 
 .banner-image {
@@ -123,7 +193,7 @@ header {
   width: 90%;
   box-sizing: border-box;
   border: #28376a 1px solid;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 30px 0px 30px 0px;
 
 }
@@ -173,7 +243,7 @@ header {
 .t-section {
   width: 90%;
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 30px 0px 30px 0px;
 }
 
@@ -182,7 +252,7 @@ header {
   flex-direction: row;
   box-sizing: border-box;
   grid-template-columns: repeat(auto-fit, 50rem);
-  border: 1px solid rgb(9, 173, 9);
+  /* border: 1px solid rgb(9, 173, 9); */
 }
 
 .img-girl {
@@ -192,7 +262,7 @@ header {
   margin: 5rem;
   height: min(60vw,50vh);
   width:auto;
-  border: 1px solid rgb(224, 85, 85);
+  /* border: 1px solid rgb(224, 85, 85); */
 
 }
 
@@ -202,7 +272,7 @@ header {
   padding: 4rem;
   margin: 30px;
   justify-content: space-evenly;
-  border: 1px solid rgb(49, 18, 161);
+  /* border: 1px solid rgb(49, 18, 161); */
 
 }
  .s-proof {
@@ -225,9 +295,13 @@ header {
 
 /* Text formatting  */
 
+.bold {
+  font-weight: bolder;
+}
+
 .medium-txt {
   font-size: 1.7rem;
-  font-weight: bolder;
+  font-weight: normal;
   text-align:justify;
   color: #28376a;
   
@@ -241,11 +315,28 @@ header {
   font-size: 3vw;
   font-weight: bolder;
 }
-/*  */
+/* End of text formatting classes */
 span {
   font-size: 3rem;
 }
 
+/* Get started button  */
+.get-str {
+  /*font-size: clamp(4,1.5vw, 40px);*/
+  font-size: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: rgb(83, 97, 216);
+  margin: 2vh;
+  font-weight: bold;
+  padding: 10px 40px;
+}
+
+.get-str:hover {
+  color: white;
+  background-color: #e26f82;
+}
 
 /* Footer */
 footer  {
