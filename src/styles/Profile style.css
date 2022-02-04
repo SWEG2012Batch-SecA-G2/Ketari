@@ -1,0 +1,148 @@
+:root {
+  --color-slate: #3f3d56;
+  --color-dark-punch: #cf566a;
+  --color-punch: #e45d74;
+  --color-cloud: #eeeeee;
+  --color-dark-silver: #dee3f0;
+  --color-silver: #e7ecf9;
+  --color-white: #ffffff;
+  --color-gray: #dddddd;
+  --color-dark-gray: #aaaaaa;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("./../fonts/Roboto.ttf");
+}
+
+@font-face {
+  font-family: dancing_script;
+  src: url("./../fonts/DancingScript.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: roboto;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  font-size: 0.95em;
+}
+
+
+/* ================ */
+/* body starts here */
+/* ================ */
+
+.body-wrapper {
+  width: 1000px;
+  margin: auto;
+  padding: 30px;
+  box-shadow: 0 10px 10px 2px var(--color-dark-silver);
+  border-radius: 10px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 100;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.body-wrapper form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.body-wrapper form > div {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.input-section-wrapper {
+  padding: 10px;
+  box-shadow: 0 0 10px 2px var(--color-dark-silver);
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  height: 100%;
+  min-height: 0;
+}
+
+.two-input-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.input-section-wrapper input {
+  flex: 1;
+  padding: 11px 12px;
+  border: 1px solid var(--color-gray);
+  border-radius: 3px;
+}
+
+.input-title {
+  flex: 1;
+}
+
+.form-save {
+  padding: 15px 10px;
+  width: 200px;
+  margin: auto;
+  margin-top: 40px;
+  background: var(--color-punch);
+  border: none;
+  color: var(--color-white);
+  border-radius: 3px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+/* ================ */
+/* body ends here */
+/* ================ */
+
+/* \/\/\/\/\/\/\/\/\/\/ */
+
+/* ================ */
+/* footer starts here */
+/* ================ */
+
+footer {
+  text-align: center;
+  background: var(--color-slate);
+  margin-top: 100px;
+}
+
+footer p {
+  color: var(--color-white);
+  padding: 20px 10px;
+}
+
+/* ================ */
+/* footer ends here */
+/* ================ */
