@@ -82,7 +82,8 @@ nav  li a {
 
 #bannerImage {
     float: right;
-    width: 420px;
+    width: max(420px, 20%);
+    height: auto;
     margin-top: -260px;
     margin-right: 160px;
 }
@@ -103,22 +104,25 @@ nav  li a {
 
 }
 
+
 .s-section {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   width: 90%;
-  grid-template-columns: repeat(4, 1fr);
   box-sizing: border-box;
-  gap: 2px;
-
+  border: #28376a 1px solid;
 }
 
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
 
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 26rem);
-
 }
 /* 
 .span-2 {
@@ -140,12 +144,14 @@ nav  li a {
   padding: 50px;
   background-color: #dfe4ee;
  border-radius: 5px;
+ position: relative;
 }
 
 .cards:hover {
-  transition: all 0.2s ease-out;
+
+  transition: all 0.4s ease-out;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-    top: -4px;
+    top: -5px;
     border: 1px solid #cccccc;
     background-color:#e6ecf9;
 }
@@ -170,7 +176,7 @@ nav  li a {
 width: 50%;
 padding: 1rem;
 margin: 5rem;
-/* height: 50vw; */
+height: auto;
 }
 
 .about-container{
