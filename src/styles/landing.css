@@ -88,6 +88,11 @@ header {
   z-index: 9999;
 }
 
+.nav-bar-on-white {
+  /* background-color: #e6ecf9; */
+  border-radius: 10px;
+}
+
 /* navigation bar links section  */
 .nav-bar-links {
   display: flex;
