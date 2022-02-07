@@ -1,14 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 /* Fade in effects, source: jobs css */
-header,
-nav,
-#entire-content {
+header , nav, #entire-content {
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 3s; /* Firefox < 16 */
-  -ms-animation: fadein 3s; /* Internet Explorer */
-  -o-animation: fadein 3s; /* Opera < 12.1 */
-  animation: fadein 3s;
+     -moz-animation: fadein 3s; /* Firefox < 16 */
+      -ms-animation: fadein 3s; /* Internet Explorer */
+       -o-animation: fadein 3s; /* Opera < 12.1 */
+          animation: fadein 3s;
 }
 
 .fade-in-section {
@@ -25,20 +23,16 @@ nav,
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 *:focus {
-  outline: none;
+    outline: none;
 }
 *,
 *::before,
@@ -48,17 +42,18 @@ nav,
   font-weight: normal;
 }
 body {
-  /* color: #eeeeee; */
-  background-color: #e6ecf9;
+    /* color: #eeeeee; */
+    background-color: #e6ecf9;
 }
 a {
-  color: #eeeeee;
-  text-decoration: none;
+    color: #eeeeee;
+    text-decoration: none;
 }
+
 
 /* header section */
 header {
-  width: 100%;
+  width: 100%
 }
 
 .header-container {
@@ -104,7 +99,7 @@ header {
   color: rgb(223, 221, 241);
   text-decoration: none;
   cursor: pointer;
-  font-size: clamp(0.9rem, 1.9vw, 1.5rem);
+  font-size: clamp(0.9rem,1.9vw,1.5rem);
   padding-right: 3vw;
   justify-self: center;
 }
@@ -116,6 +111,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 
 /* The headline text  */
 .text-prompt {
@@ -140,13 +136,14 @@ header {
 }
 
 /* bad naming cta is short for call to action */
-.cta-links {
+.cta-links{
   text-decoration: none;
-  color: aliceblue;
+  color:aliceblue;
   padding: 12px 50px;
-  font-size: clamp(4, 1.5vw, 40px);
+  font-size: clamp(4,1.5vw, 40px);
   margin-top: 10px;
 }
+
 
 .cta-links:first-child {
   color: black;
@@ -157,6 +154,7 @@ header {
 .cta-links:first-child:hover {
   color: white;
   background-color: rgb(83, 97, 216);
+
 }
 
 .cta-links:last-child {
@@ -167,6 +165,7 @@ header {
 
 .cta-links:last-child:hover {
   background-color: #f77e92;
+
 }
 
 .banner-image {
@@ -178,6 +177,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .s-section {
@@ -188,12 +188,14 @@ header {
   box-sizing: border-box;
 
   margin: 30px 0px 30px 0px;
+
 }
 
 .box {
   display: flex;
   justify-content: space-between;
   margin: 20px 0px;
+  flex-wrap: wrap;
 }
 
 .cards-container {
@@ -204,7 +206,7 @@ header {
 }
 
 .cards {
-  line-height: 30px;
+  line-height:30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,15 +214,15 @@ header {
   margin: 20px;
   padding: 50px;
   background-color: #dfe4ee;
-  border-radius: 5px;
-  position: relative;
+ border-radius: 5px;
+ position: relative;
 }
 
 .cards:hover {
   transition: all 0.4s ease-out;
-  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-  top: -5px;
-  background-color: #e6ecf9;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -5px;
+    background-color:#e6ecf9;
 }
 .tc {
   /* align-items: center; */
@@ -249,24 +251,26 @@ header {
   justify-self: center;
   padding: 1rem;
   margin: 5rem;
-  height: min(60vw, 50vh);
-  width: auto;
+  height: min(60vw,50vh);
+  width:auto;
   /* border: 1px solid rgb(224, 85, 85); */
+
 }
 
-.about-container {
+.about-container{
   display: flex;
   flex-direction: column;
   padding: 4rem;
   margin: 30px;
   justify-content: space-evenly;
   /* border: 1px solid rgb(49, 18, 161); */
+
 }
-.s-proof {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+ .s-proof {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
 
 .stats {
   display: flex;
@@ -289,8 +293,9 @@ header {
 .medium-txt {
   font-size: 1.7rem;
   font-weight: normal;
-  text-align: justify;
+  text-align:justify;
   color: #28376a;
+  
 }
 
 .small-txt {
@@ -325,12 +330,18 @@ span {
 }
 
 /* Footer */
-footer {
-  padding-top: 10px;
-  height: 4vh;
-  text-align: center;
-  background-color: #28376a;
+footer  {
+    padding-top: 10px;
+    height: 4vh;
+    text-align: center;
+    background-color: #28376a;
 }
 footer > p {
   color: #cccccc;
 }
+
+
+
+
+
+
