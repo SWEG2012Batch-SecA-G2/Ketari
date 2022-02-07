@@ -340,6 +340,15 @@ footer > p {
   color: #cccccc;
 }
 
+@media (max-width: 500px) {
+
+  .banner-image {
+    display: none;
+  }
+  .header-container {
+    height: 50vh;
+  }
+}
 
 
 
