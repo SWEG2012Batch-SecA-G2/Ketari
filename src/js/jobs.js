@@ -150,9 +150,7 @@ function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescr
     eachJobDiv.appendChild(companyNameAndAddressDiv);
     eachJobDiv.appendChild(jobTitleAndTypeDiv);
     eachJobDiv.appendChild(jobDescriptionP);
-    eachJobDiv.onclick = function showDetails(){
-        displayDetailsOfJob(logo, company, location, jobRole, jobType);
-    };
+    
     document.getElementById("jobListings").appendChild(eachJobDiv);
 
 
