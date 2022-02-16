@@ -6,6 +6,7 @@ let jobs = [
         "location": "Addis Ababa, Ethiopia",
         "jobRole": "IOS Developer",
         "jobType": "Full-Time",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
     },
     {
         "logo": "assets/icons/ethioTelecom.png",
@@ -13,6 +14,7 @@ let jobs = [
         "location": "Hawassa, Ethiopia",
         "jobRole": "Graphic Designer",
         "jobType": "Part-Time",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
     },
     {
         "logo": "assets/icons/ethiopianAirport.png",
@@ -20,6 +22,7 @@ let jobs = [
         "location": "Addis Ababa, Ethiopia",
         "jobRole": "Android Developer",
         "jobType": "Freelance",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
     },
     {
         "logo": "assets/icons/cbe.png",
@@ -27,6 +30,7 @@ let jobs = [
         "location": "Addis Ababa, Ethiopia",
         "jobRole": "Fullstack Developer",
         "jobType": "Full-Time",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
     },
     {
         "logo": "assets/icons/ebc.png",
@@ -34,6 +38,7 @@ let jobs = [
         "location": "Bahir Dar, Ethiopia",
         "jobRole": "IOS Developer",
         "jobType": "Part-Time",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
     },
 
 ];
@@ -44,7 +49,7 @@ let searchHistory = [];
 let jobListings = document.getElementById("jobListings");
 
 // Create Object and insert
-function createHTML(logo, company, location, jobRole, jobType){
+function createHTML(logo, company, location, jobRole, jobType, jobDescription){
     const eachJobDiv = document.createElement("div");
     eachJobDiv.id = "eachJob";
 
@@ -84,16 +89,74 @@ function createHTML(logo, company, location, jobRole, jobType){
     eachJobDiv.appendChild(companyLogo);
     eachJobDiv.appendChild(companyNameAndAddressDiv);
     eachJobDiv.appendChild(jobTitleAndTypeDiv);
+    eachJobDiv.onclick = function showDetails(){
+        displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescription);
+    };
     document.getElementById("jobListings").appendChild(eachJobDiv);
 }
 
 // Function to insert jobs from the jobs list
 function insertJobs(){ 
     for(var i = 0;  i < jobs.length; i++){
-        createHTML(jobs[i]["logo"], jobs[i]["company"], jobs[i]["location"], jobs[i]["jobRole"], jobs[i]["jobType"]);        
+        createHTML(jobs[i]["logo"], jobs[i]["company"], jobs[i]["location"], jobs[i]["jobRole"], jobs[i]["jobType"], jobs[i]["description"]);        
     }               
 }
 
+// Display Details
+function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescription){
+    jobListings.innerHTML = "";
+    const eachJobDiv = document.createElement("div");
+    eachJobDiv.id = "eachJobExpanded";
+
+    const companyLogo = document.createElement("img");
+    companyLogo.src = logo;
+    companyLogo.id = "companyLogos";
+
+    const companyNameAndAddressDiv = document.createElement("div");
+    companyNameAndAddressDiv.id = "companyNameAndAddress";
+
+    const companyNameH1 = document.createElement("h1");
+    const companyNameH1T = document.createTextNode(company);
+    companyNameH1.id = "companyName";
+    companyNameH1.appendChild(companyNameH1T);
+    companyNameAndAddressDiv.appendChild(companyNameH1);
+
+    const companyLocationH4 = document.createElement("h4");
+    const companyLocationH4T = document.createTextNode(location);
+    companyLocationH4.appendChild(companyLocationH4T);
+    companyNameAndAddressDiv.appendChild(companyLocationH4);
+
+    const jobTitleAndTypeDiv = document.createElement("div");
+    jobTitleAndTypeDiv.id = "jobTitleAndType";
+
+    const jobTitleH3 = document.createElement("h3");
+    const jobTitleH3T = document.createTextNode(jobRole);
+    jobTitleH3.id = "jobTitle";
+    jobTitleH3.appendChild(jobTitleH3T);
+    jobTitleAndTypeDiv.appendChild(jobTitleH3);
+
+    const jobTypeH4 = document.createElement("h4");
+    const jobTypeH4T = document.createTextNode(jobType);
+    jobTypeH4.id = "jobType";
+    jobTypeH4.appendChild(jobTypeH4T);
+    jobTitleAndTypeDiv.appendChild(jobTypeH4);
+
+    const jobDescriptionP = document.createElement("p");
+    jobDescriptionP.id = "jobDescription";
+    const jobDescriptionPT = document.createTextNode(jobDescription);
+    jobDescriptionP.appendChild(jobDescriptionPT);
+
+    eachJobDiv.appendChild(companyLogo);
+    eachJobDiv.appendChild(companyNameAndAddressDiv);
+    eachJobDiv.appendChild(jobTitleAndTypeDiv);
+    eachJobDiv.appendChild(jobDescriptionP);
+    eachJobDiv.onclick = function showDetails(){
+        displayDetailsOfJob(logo, company, location, jobRole, jobType);
+    };
+    document.getElementById("jobListings").appendChild(eachJobDiv);
+
+
+}
 
 // Display Recent Searches
 function insertRecentSearchesHTML(searchedTerm){
@@ -191,14 +254,16 @@ function filterJobs(index){
 }
 
 // Email Subscribe
+let emailSubscribers = [];
 let emailSubscriptionBody = "You've successfully signed up for Ketari's email subscription!";
 function subscribeEmail(){
     let userEmail = document.getElementById("userEmail").value;    
-    window.open("mailto:" + userEmail + "?subject=Ketari.com&body=" + emailSubscriptionBody);
     if(userEmail != ""){
+        emailSubscribers.push(userEmail);
         let emailSubscriptionBtn = document.getElementById("emailSubscriptionBtn");
         emailSubscriptionBtn.innerText = "Subscribed";
-        emailSubscriptionBtn.style.backgroundColor = "Green"; // = "background-color: Green";
+        emailSubscriptionBtn.style.backgroundColor = "Green"; 
+        window.open("mailto:" + userEmail + "?subject=Ketari.com&body=" + emailSubscriptionBody);
     }
 }
 

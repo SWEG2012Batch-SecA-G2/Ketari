@@ -217,6 +217,16 @@ nav  li a {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+#eachJobExpanded {
+    height: 200px;
+    width: 89%;
+    background-color: #d9dfeca2;
+    border-radius: 20px;
+    padding: 10px 30px 10px 10px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 #eachJob:hover {
     background-color: #c8cdda94;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -279,6 +289,13 @@ nav  li a {
     margin-top: 6px;
     margin-right: 10px;
     margin-left: 20px;
+}
+
+#jobDescription {
+    margin-top: 120px;
+    margin-left: 20px;
+    text-align: left;
+    font-weight: bold;
 }
 
 /* Job Roles */
