@@ -28,14 +28,14 @@
             <div id="searchBox">
                 <div id="searchJobKeyword">
                     <img id="searchIcon" src="assets/icons/searchIcon.png" >
-                    <input type="text" placeholder="Job title or keyword">
+                    <input id="searchedJob" type="text" placeholder="Job title or keyword">
                 </div>
                 <div id="searchJobLocation">
                     <img>
-                    <input type="text" placeholder="Select Location">
+                    <input id="searchedLocation" type="text" placeholder="Select Location">
                 </div>
                 <div id="searchBotton">
-                    <button> Search </button>
+                    <button onclick=searchJob()> Search </button>
                 </div>
             </div>
         </header>
@@ -46,23 +46,23 @@
             <div id="jobTypes">
                 <h2 id="jobTypeTitle"> Job Types </h2>
                 <div id="eachJobType">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick=filterJobs(1)>
                     <h6> Full-Time </h6>
                 </div>
                 <div id="eachJobType">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick=filterJobs(2)>
                     <h6> Part-Time </h6>
                 </div>
                 <div id="eachJobType">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick=filterJobs(3)>
                     <h6> Internship </h6>
                 </div>
                 <div id="eachJobType">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick=filterJobs(4)>
                     <h6> Freelance </h6>
                 </div>
                 <div id="eachJobType">
-                    <input type="checkbox">
+                    <input type="checkbox" onclick=filterJobs(5)>
                     <h6> Student </h6>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                 </div>
                 <div id="eachJobType">
                     <input type="checkbox">
-                    <h6> Brand Designer </h6>
+                    <h6> Graphic Designer </h6>
                 </div>
                 <div id="eachJobType">
                     <input type="checkbox">
@@ -98,126 +98,8 @@
             <h3 id="jobsTitle"> Jobs </h3> 
             <!-- Each Job -->
         <!--
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/cbe.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ethioTelecom.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ethiopianAirport.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ebc.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ride.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/cbe.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ethioTelecom.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ethiopianAirport.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ebc.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
-            <!-- Job 1 -->
-            <div id="eachJob">
-                <img id="companyLogos" src="assets/icons/ride.png">
-                <div id="companyNameAndAddress">
-                    <h1 id="companyName"> Commercial Bank of Ethiopia </h1>
-                    <h4> Addis Ababa, Ethiopia </h4>
-                </div>
-                <div id="jobTitleAndType">
-                    <h3 id="jobTitle"> Senior Web Developer </h3>
-                    <h4 id="jobType"> Full-Time Job </h4>
-                </div>
-            </div>
+            
+        -->
         </section>
 
         <!-- Email Subscriptions -->
@@ -225,17 +107,14 @@
             <div id="emailSubscription">
                 <h1> Sign up to our newsletter </h1>
                 <div id="emailSubscriptionInput">
-                    <input type="text" placeholder="Email">
+                    <input id="userEmail" type="text" placeholder="Email">
                 </div>
-                <button> Subscribe </button>
+                <button id="emailSubscriptionBtn" onclick=subscribeEmail()> Subscribe </button>
             </div>
 
             <div id="recentSearches">
                 <h1> My Recent Searches </h1>
-                <h4> Los Angeles, California </h4>
-                <h4> Los Angeles, California </h4>
-                <h4> Los Angeles, California </h4>
-                <h4> Los Angeles, California </h4>
+                <h4> Android, Addis Ababa </h4>
             </div>
         </div>
 
@@ -244,89 +123,7 @@
             <p> Ketari &copy; 2022 All Rights Reserved! </p>
         </footer>
 
-        <script>
-        let jobs = [
-                {
-                    "logo": "assets/illustrations/femaleDev.png",
-                    "company": "Commercial Bank Of Ethiopia",
-                    "location": "Addis Ababa, Ethiopia",
-                    "jobRole": "Senior Web Developer",
-                    "jobType": "Full-Time",
-                },
-                {
-                    "logo": "assets/icons/cbe.png",
-                    "company": "Commercial Bank Of Ethiopia",
-                    "location": "Addis Ababa, Ethiopia",
-                    "jobRole": "Senior Web Developer",
-                    "jobType": "Full-Time",
-                },
-                {
-                    "logo": "assets/icons/cbe.png",
-                    "company": "Commercial Bank Of Ethiopia",
-                    "location": "Addis Ababa, Ethiopia",
-                    "jobRole": "Senior Web Developer",
-                    "jobType": "Full-Time",
-                },
-            ];
-
-            let jobListings = document.getElementById("jobListings");
-
-            function insertJobs() {
-
-                for(let i = 0; i < jobs.length; i++){
-                    // Company Logo
-                    let companyLogo = document.createElement("img");
-                    companyLogo.src = jobs[i].logo;
-                    companyLogo.id = "companyLogos";
-
-                    // Company Name
-                    let companyNameH1 = document.createElement("h1");
-                    let companyNameText = document.createTextNode(jobs[i].company);
-                    companyNameH1.appendChild(companyNameText);
-                    companyNameH1.id = "companyName";
-
-                    // Company Location
-                    let companyLocationH4 = document.createElement("h4");
-                    let companyLocationText = document.createTextNode(jobs[i].location);
-                    companyLocationH4.appendChild(companyLocationText);
-                    
-                    // Div - companyNameAndAddress
-                    let divCompanyNameAndAddress = document.createElement("div");
-                    divCompanyNameAndAddress.id = "companyNameAndAddress";
-                    divCompanyNameAndAddress.appendChild(companyNameH1);
-                    divCompanyNameAndAddress.appendChild(companyLocationH4);
-
-                    // Job Title
-                    let jobTitleH3 = document.createElement("h3");
-                    let jobTitleText = document.createTextNode(jobs[i].jobRole);
-                    jobTitleH3.appendChild(jobTitleText);
-                    jobTitleH3.id = "jobTitle";
-
-                    // Job Type
-                    let jobTypeH4 = document.createElement("h4");
-                    let jobTypeText = document.createTextNode(jobs[i].jobType);
-                    jobTypeH4.appendChild(jobTypeText);
-                    jobTypeH4.id = "jobType";
-
-
-                    // Div - jobTitleAndType
-                    let divJobTitleAndType = document.createElement("div");
-                    divJobTitleAndType.appendChild(jobTypeH3);
-                    divJobTitleAndType.appendChild(jobTypeH4);
-                    divJobTitleAndType.id = "jobTitleAndType";
-
-                    // Div
-                    let div = document.createElement("div");
-                    div.id = "eachJob";
-                    div.appendChild(companyLogo);
-                    div.appendChild(divCompanyNameAndAddress);
-                    div.appendChild(divJobTitleAndType);
-
-
-                    document.getElementById("jobListings").appendChild(div);
-                }
-            }
-            window.onload = insertJobs();
-        </script>
+        <!-- Script -->
+        <script src="src/js/jobs.js"></script>
     </body>
 </html>

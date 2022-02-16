@@ -366,7 +366,13 @@ nav  li a {
     color: #cf566a;
 }
 
-
+#noJobsFound {
+    margin-top: 4%;
+    margin-left: -50px;
+    text-align: center;
+    font-size: 30px;
+    color: #cf566a;
+}
 
 
 /* Footer */
