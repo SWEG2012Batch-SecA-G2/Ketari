@@ -116,7 +116,9 @@ header {
   display: flex;
   align-items: center;
 }
-
+.links-on-white {
+  color: #28376a;
+}
 
 /* The headline text  */
 .text-prompt {
