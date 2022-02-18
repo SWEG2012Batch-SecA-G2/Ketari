@@ -1,4 +1,13 @@
 // List of available jobs
+
+
+let a = {
+    username: "",
+    
+}
+
+localStorage.setItem("users", a);
+
 let jobs = [
     {
         "logo": "assets/icons/ride.png",
