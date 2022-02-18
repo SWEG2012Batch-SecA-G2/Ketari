@@ -27,7 +27,7 @@ function validateLogin(){
   else
     document.getElementById("passError").innerHTML = "";
 
-  logArr = JSON.parse(localStorage.getItem("users"));
+  logArr = JSON.parse(localStorage.getItem("user"));
   for(var i = 0; i < logArr.length; i++){
     if(logArr[i].username == username && logArr[i].password == password){
       alert("Success");
@@ -83,16 +83,16 @@ function validateSignup(){
   var obj = new User(username,email,password);
 
   let arr = [];
-  if(localStorage.key("users") != null)
-    arr = JSON.parse(localStorage.getItem("users"));
+  if(localStorage.key("user") != null)
+    arr = JSON.parse(localStorage.getItem("user"));
   
   arr.push(obj);
-  localStorage.setItem("users",JSON.stringify(arr));
+  localStorage.setItem("user",JSON.stringify(arr));
   
   return true;
 }
-// if(localStorage.getItem("users") == null){
-  //   localStorage.setItem("users",JSON.stringify(username+","));
+// if(localStorage.getItem("user") == null){
+  //   localStorage.setItem("user",JSON.stringify(username+","));
   //   localStorage.setItem("emails",JSON.stringify(email+","));
   //   localStorage.setItem("passwords",JSON.stringify(password+","));
   // }
@@ -100,7 +100,7 @@ function validateSignup(){
   // else{
   //   let user = "",psw = "", eml = "";
 
-  //   user = JSON.parse(localStorage.getItem("users")).split(",");
+  //   user = JSON.parse(localStorage.getItem("user")).split(",");
   //   eml  = JSON.parse(localStorage.getItem("emails")).split(",");
   //   psw = JSON.parse(localStorage.getItem("passwords")).split(",");
 
@@ -108,7 +108,7 @@ function validateSignup(){
   //   eml += email+",";
   //   psw += password+",";
 
-  //   localStorage.setItem("users",JSON.stringify(user));
+  //   localStorage.setItem("user",JSON.stringify(user));
   //   localStorage.setItem("emails",JSON.stringify(eml));
   //   localStorage.setItem("passwords",JSON.stringify(psw));
   // }
