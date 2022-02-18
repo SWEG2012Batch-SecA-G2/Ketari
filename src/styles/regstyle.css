@@ -1,5 +1,5 @@
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);*/
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap'); */
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +36,7 @@ body {
 #contact textarea,
 #contact button[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  border-radius: 20px;
 }
 
 #contact {
@@ -43,6 +44,7 @@ body {
   padding: 25px;
   margin: 150px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 20px;
 }
 
 #contact h3 {
@@ -100,7 +102,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #4CAF50;
+  background: #677eff;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
@@ -108,7 +110,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-  background: #43A047;
+  background: #e26f82;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
