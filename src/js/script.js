@@ -2,7 +2,10 @@ const toggleForm = () => {
     const container = document.querySelector('.container');
     container.classList.toggle('active');
 };
-
+var f = window.location.href.split("?")[1]
+if(f=="tog"){
+  toggleForm();
+}
 var regEx = /^([a-zA-Z_\.]+)@([a-zA-Z_\.]+)\.([a-zA-z]{2,5})$/;
 
 function User(username,email,password){
