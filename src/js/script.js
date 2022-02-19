@@ -14,7 +14,11 @@ function User(username,email,password){
   this.password = password;
 }
 
+var admin = new User("admin","admin@admin.com","admin");
+createSession(admin);
+
 let logArr = [];
+
 function validateLogin(){
   let username = document.forms["Login"]["LoginUsername"].value;
   let password = document.forms["Login"]["LoginPassword"].value;
@@ -31,14 +35,10 @@ function validateLogin(){
   else
     document.getElementById("passError").innerHTML = "";
 
-  if(localStorage.getItem("user") != null)
     logArr = JSON.parse(localStorage.getItem("user"));
-  else{
-    alert("No Account Found. please try again!");
-    toggleForm();
-  }
+    console.log(logArr.length);
   for(var i = 0; i < logArr.length; i++){
-    console.log(logArr[i]);
+    alert("hi");
     if(logArr[i].username == username && logArr[i].password == password){
       createLoggedSession(logArr[i]);
       return true;
