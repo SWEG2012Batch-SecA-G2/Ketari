@@ -1,3 +1,7 @@
+let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+let loggedUserHTML = document.getElementById("loggedUser").innerText = loggedUser["username"];
+
+
 let jobs = JSON.parse(localStorage.getItem("jobs"));
 
 let searchHistory = [];
