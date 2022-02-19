@@ -33,13 +33,11 @@ function validateLogin(){
   logArr = JSON.parse(localStorage.getItem("user"));
   for(var i = 0; i < logArr.length; i++){
     if(logArr[i].username == username && logArr[i].password == password){
-      alert("Success");
       return true;
     }
   }
 
-  alert("No Account Found. please signup first!");
-  toggleForm();
+  alert("No Account Found. please try again!");
   return false;
 }
 
