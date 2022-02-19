@@ -34,7 +34,7 @@ function validateLogin(){
   for(var i = 0; i < logArr.length; i++){
     console.log(logArr[i]);
     if(logArr[i].username == username && logArr[i].password == password){
-      deleteSession(logArr[i]);
+      createLoggedSession(logArr[i]);
       return true;
     }
   }
@@ -92,34 +92,13 @@ function validateSignup(){
 
 function createSession(obj){
   let arr = [];
-  if(localStorage.key("user") != null)
+  if(localStorage.getItem("user") != null)
     arr = JSON.parse(localStorage.getItem("user"));
   
   arr.push(obj);
   localStorage.setItem("user",JSON.stringify(arr));
 }
-
-function deleteSession(logArr){
+function createLoggedSession(logArr){
+  delete logArr.password;
   localStorage.setItem("loggedUser",JSON.stringify(logArr));
 }
-// if(localStorage.getItem("user") == null){
-  //   localStorage.setItem("user",JSON.stringify(username+","));
-  //   localStorage.setItem("emails",JSON.stringify(email+","));
-  //   localStorage.setItem("passwords",JSON.stringify(password+","));
-  // }
-
-  // else{
-  //   let user = "",psw = "", eml = "";
-
-  //   user = JSON.parse(localStorage.getItem("user")).split(",");
-  //   eml  = JSON.parse(localStorage.getItem("emails")).split(",");
-  //   psw = JSON.parse(localStorage.getItem("passwords")).split(",");
-
-  //   user += username+",";
-  //   eml += email+",";
-  //   psw += password+",";
-
-  //   localStorage.setItem("user",JSON.stringify(user));
-  //   localStorage.setItem("emails",JSON.stringify(eml));
-  //   localStorage.setItem("passwords",JSON.stringify(psw));
-  // }
