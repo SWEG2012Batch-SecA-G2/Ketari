@@ -44,12 +44,12 @@
             <h1> Post A Job </h1>
             <h3> Please fill out all the required inputs in the form!</h3>
             <div id="newJobPostInputs">
-                <input type="text" placeholder="company name">
-                <input type="text" placeholder="company name">
-                <input type="text" placeholder="company name">
-                <input type="text" placeholder="company name">
-                <input type="text" placeholder="company name">
-                <button id="submitJobBtn"> Submit New Job </button>
+                <input id="companyName" type="text" placeholder="company name">
+                <input id="location" type="text" placeholder="location">
+                <input id="jobRole" type="text" placeholder="job role">
+                <input id="jobType" type="text" placeholder="job type">
+                <input id="description" type="text" placeholder="description">
+                <button id="submitJobBtn" onclick="postJob()"> Submit New Job </button>
             </div>
         </div>
 
@@ -58,5 +58,7 @@
         <footer>
             <p> Ketari &copy; 2022 All Rights Reserved! </p>
         </footer>
+
+        <script src="src/js/postJob.js"></script>
     </body>
 </html>

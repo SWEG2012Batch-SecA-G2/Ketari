@@ -212,12 +212,16 @@ nav  li a {
   width: 200px;
   margin: auto;
   margin-top: 40px;
-  background: var(--color-punch);
+  background: var(--color-dark-punch);
   border: none;
   color: var(--color-white);
-  border-radius: 3px;
+  border-radius: 20px;
   font-size: 0.9em;
   cursor: pointer;
+}
+
+.form-save:hover {
+  background-color: var(--color-punch);
 }
 
 /* ================ */
