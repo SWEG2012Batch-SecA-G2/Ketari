@@ -2,30 +2,59 @@
 
 #newJobPostForm {
     color: black;
-    background-color: white;
-    width: 900px;
-    height: 500px;
+    background-color: #f1f1f1;
+    width: 650px;
     border-radius: 20px;
     margin: 20px auto;
-    margin-top: -50px;
+    margin-top: -300px;
+    margin-bottom: 200px;
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.4);
     text-align: center;
+    padding: 40px 0px 40px;
+    z-index: -1;
 }
 
 #newJobPostForm h1 {
-    padding: 20px 0px;
+    padding: 20px 0px 10px;
 }
 
 #newJobPostForm h3 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
+
 #newJobPostInputs input{
+    background-color: white;
     border-radius: 20px;
     padding: 10px 20px;
-    width: 250px;
-    border-color: rgba(0, 0, 0, 0.322);
+    width: 450px;
+    border: none;
     display: block;
     margin: 0px auto;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#inputSubContainer {
+    text-align: left;
+    background-color: #f1f1f1;
+    width: 500px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+#inputSubContainer:hover {
+    background-color: #e7e7e7;
+
+}
+
+#inputSubContainer h3 {
+    margin-left: 2%;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -37,10 +66,28 @@
     padding: 10px 20px;
     color: white;
     font-size: 20px;
-    margin: 0px auto;
+    margin: 30px auto;
     border: none;
 }
 
 #submitJobBtn:hover {
     background-color: #e45d74;
+}
+
+#undoSubmissionBtn {
+    width: 200px;
+    display: block;
+    border-radius: 20px;
+    background-color: #46af72;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    margin: 0px auto;
+    border: none;
+    display: none;
+}
+
+#undoSubmissionBtn:hover {
+    background-color: #4ec780;
+
 }

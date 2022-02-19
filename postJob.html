@@ -15,20 +15,20 @@
             <!-- Nav Links -->
             <nav>
                 <ul>
-                    <li> <a href="#"> Post a Job </a> </li>
-                    <li> <a href="signup.html"> Sign Up </a> </li>
-                    <li> <a href="signin.html"> Sign In </a> </li>
+                    <li> <a href="jobs.html"> Jobs </a> </li>
+                    <li> <a href="Profiles.html"> Profile </a> </li>
+                    <li> <a href="landing.html"> Sign Out </a> </li>
                 </ul>
             </nav>
             <!-- Banner Texts -->
             <div id="intro">
-                <h1> Find Your Dream Job </h1>
-                <h5> Search for a suitable job </h5>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium molestias rem voluptatem sint! Quisquam vitae minus beatae aperiam, corrupti, dolores obcaecati, fugiat quia perferendis harum autem repellendus magnam. Consequuntur, repudiandae.</p>
+                <h1> Find Incredible Talent </h1>
+                <h5> Search for a qualified employee </h5>
+                <p style="color: transparent;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium molestias rem voluptatem sint! Quisquam vitae minus beatae aperiam, corrupti, dolores obcaecati, fugiat quia perferendis harum autem repellendus magnam. Consequuntur, repudiandae.</p>
             </div>
             <!-- Banner Image -->
             <div>
-                <img id="bannerImage" src="assets\illustrations\undraw_Lost_online_re_upmy.png">
+                <img id="" style="float: right; width: 420px; margin-top: -260px; margin-right: 50px;" src="assets\illustrations\undraw_Lost_online_re_upmy.png">
             </div>            
         </header>
 
@@ -44,12 +44,20 @@
             <h1> Post A Job </h1>
             <h3> Please fill out all the required inputs in the form!</h3>
             <div id="newJobPostInputs">
-                <input id="companyName" type="text" placeholder="company name">
-                <input id="location" type="text" placeholder="location">
-                <input id="jobRole" type="text" placeholder="job role">
-                <input id="jobType" type="text" placeholder="job type">
-                <input id="description" type="text" placeholder="description">
+                <div id="inputSubContainer">
+                    <h3> About Company </h3>
+                    <input id="companyLogo" type="text" placeholder="link to company logo">
+                    <input id="companyName" type="text" placeholder="company name">
+                    <input id="location" type="text" placeholder="location">
+                </div>
+                <div id="inputSubContainer">
+                    <h3> About Job </h3>
+                    <input id="jobRole" type="text" placeholder="job role">
+                    <input id="jobType" type="text" placeholder="job type">
+                    <input id="description" type="text" placeholder="description">
+                </div>
                 <button id="submitJobBtn" onclick="postJob()"> Submit New Job </button>
+                <button id="undoSubmissionBtn" onclick="undoPostJob()"> Undo </button>
             </div>
         </div>
 

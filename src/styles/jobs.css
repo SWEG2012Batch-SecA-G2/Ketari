@@ -189,6 +189,9 @@ nav  li a {
     margin: 80px 24% 80px 20%;
     margin-bottom: 100px;
     background-color: #3d4b7805;
+    height: fit-content;
+    padding-bottom: 8px;
+    
 }
 
 #jobsTitle  {
@@ -199,12 +202,15 @@ nav  li a {
 
 #companyLogos {
     float: left;
-    width: 80px;
-    margin: 10px;
+    width: 90px;
+    height: 80px;
+    margin: 10px auto;
+    border-radius: 20px;
+    align-self: center;
 }
 
 #companyLogos:hover {
-    width: 100px;
+    
 }
 
 #eachJob {
@@ -394,6 +400,7 @@ nav  li a {
 
 /* Footer */
 footer {
+    margin-top: 500px;
     padding-top: 10px;
     height: 4vh;
     text-align: center;
