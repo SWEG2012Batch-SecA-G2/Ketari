@@ -36,9 +36,7 @@ function validateLogin(){
     document.getElementById("passError").innerHTML = "";
 
     logArr = JSON.parse(localStorage.getItem("user"));
-    console.log(logArr.length);
   for(var i = 0; i < logArr.length; i++){
-    alert("hi");
     if(logArr[i].username == username && logArr[i].password == password){
       createLoggedSession(logArr[i]);
       return true;
