@@ -13,6 +13,7 @@ function User(username,email,password){
   this.email = email;
   this.password = password;
 }
+
 let logArr = [];
 function validateLogin(){
   let username = document.forms["Login"]["LoginUsername"].value;
@@ -30,7 +31,12 @@ function validateLogin(){
   else
     document.getElementById("passError").innerHTML = "";
 
-  logArr = JSON.parse(localStorage.getItem("user"));
+  if(localStorage.getItem("user") != null)
+    logArr = JSON.parse(localStorage.getItem("user"));
+  else{
+    alert("No Account Found. please try again!");
+    toggleForm();
+  }
   for(var i = 0; i < logArr.length; i++){
     console.log(logArr[i]);
     if(logArr[i].username == username && logArr[i].password == password){
