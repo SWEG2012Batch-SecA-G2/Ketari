@@ -32,7 +32,9 @@ function validateLogin(){
 
   logArr = JSON.parse(localStorage.getItem("user"));
   for(var i = 0; i < logArr.length; i++){
+    console.log(logArr[i]);
     if(logArr[i].username == username && logArr[i].password == password){
+      deleteSession(logArr[i]);
       return true;
     }
   }
@@ -83,14 +85,22 @@ function validateSignup(){
 
   var obj = new User(username,email,password);
 
+  createSession(obj);
+  
+  return true;
+}
+
+function createSession(obj){
   let arr = [];
   if(localStorage.key("user") != null)
     arr = JSON.parse(localStorage.getItem("user"));
   
   arr.push(obj);
   localStorage.setItem("user",JSON.stringify(arr));
-  
-  return true;
+}
+
+function deleteSession(logArr){
+  localStorage.setItem("loggedUser",JSON.stringify(logArr));
 }
 // if(localStorage.getItem("user") == null){
   //   localStorage.setItem("user",JSON.stringify(username+","));
