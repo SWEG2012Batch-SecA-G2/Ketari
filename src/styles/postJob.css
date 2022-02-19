@@ -22,7 +22,7 @@
     margin-bottom: 30px;
 }
 
-#newJobPostInputs input{
+#newJobPostInputs input[type=text]{
     background-color: white;
     border-radius: 20px;
     padding: 10px 20px;

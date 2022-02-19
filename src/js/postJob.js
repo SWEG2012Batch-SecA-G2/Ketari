@@ -27,22 +27,24 @@ function postJob(){
 
     // Show notification and undo button
     submitJobBtn.style.backgroundColor = "Green";
-    submitJobBtn.innerText = "Posted!";
+    submitJobBtn.value = "Posted!";
     submitJobBtn.onclick = () => {};
     undoSubmissionBtn.style.display = "block";    
 }
 
 function undoPostJob(){
+    let submitJobBtn = document.getElementById("submitJobBtn"); 
+    let undoSubmissionBtn = document.getElementById("undoSubmissionBtn");
+    
     let oldJobsList = JSON.parse(localStorage.getItem("jobs"));
     oldJobsList.pop();
     localStorage.clear();
     localStorage.setItem("jobs", JSON.stringify(oldJobsList));
+
     // Show notification and undo button
     submitJobBtn.style.backgroundColor = "#cf566a";
-    submitJobBtn.innerText = "Submit New Job!";
+    submitJobBtn.value = "Submit New Job!";
     submitJobBtn.onclick = postJob;
     undoSubmissionBtn.style.display = "none";    
 }
-
-
 
