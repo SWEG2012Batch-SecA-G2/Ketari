@@ -345,14 +345,43 @@ span {
 }
 
 /* Footer */
-footer  {
-    padding-top: 10px;
-    height: 4vh;
-    text-align: center;
-    background-color: #28376a;
+footer{
+  width: 100%;
+ display: flex;
+ background-color:#28376a;
+padding-bottom: 30px;
+align-items: center;
+flex-direction: column;
+
+}
+.foot-links  {
+  display: flex;
+   width: 50%;
+   justify-content: space-around;
+   background-color:#28376a;
+}
+
+.foot-links h3 {
+  color: #cccccc;
+  font-weight: bolder;
+  margin: 10px 0px 10px 0px;
+}
+
+.foot-links p {
+  color: #cccccc;
+}
+.foot-links a:hover {
+  color: #e26f82;
+
 }
 footer > p {
   color: #cccccc;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: solid rgba(14, 8, 8, 0.356) 2px;
+}
+.f-link {
+  text-align: center;
 }
 
 @media (max-width: 500px) {
