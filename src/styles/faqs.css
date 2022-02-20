@@ -111,3 +111,20 @@ footer {
 footer p{
     padding-top: 10px;
 }
+
+@media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+    #logoImage{
+    width: 60px;
+    height: auto;
+    float: left;
+   
+    }
+  }
