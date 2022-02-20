@@ -68,7 +68,7 @@ p{
     margin: 5px 0px;
 }
 .about-h1{
-	background: url(../../assets/icons/user.png);
+	background: url(../images/user.png);
 	background-size: 30px;
     line-height: 41px;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ p{
     background-position: center left;
 }
 .contact{
-	background: url(../../assets/icons/3.png);
+	background: url(../images/3.png);
     background-size: 37px;
     height: 104px;
     padding-left: 50px;
@@ -84,7 +84,7 @@ p{
     line-height: 33px;
 }
 .edu-h1{
-	background: url(../../assets/icons/edu.png);
+	background: url(../images/edu.png);
 	background-size: 30px;
     line-height: 41px;
     background-repeat: no-repeat;
