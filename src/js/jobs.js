@@ -1,4 +1,5 @@
 let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+
 try {
     let loggedUserHTML = document.getElementById("loggedUser").innerText = loggedUser["username"];
 } catch (error) {
@@ -67,6 +68,8 @@ function insertJobs(){
     }               
 }
 
+
+
 // Display Details
 function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescription){
     jobListings.innerHTML = "";
@@ -75,10 +78,10 @@ function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescr
 
     const companyLogo = document.createElement("img");
     companyLogo.src = logo;
-    companyLogo.id = "companyLogos";
+    companyLogo.id = "companyLogosExpanded";
 
     const companyNameAndAddressDiv = document.createElement("div");
-    companyNameAndAddressDiv.id = "companyNameAndAddress";
+    companyNameAndAddressDiv.id = "companyNameAndAddressExpanded";
 
     const companyNameH1 = document.createElement("h1");
     const companyNameH1T = document.createTextNode(company);
@@ -92,7 +95,7 @@ function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescr
     companyNameAndAddressDiv.appendChild(companyLocationH4);
 
     const jobTitleAndTypeDiv = document.createElement("div");
-    jobTitleAndTypeDiv.id = "jobTitleAndType";
+    jobTitleAndTypeDiv.id = "jobTitleAndTypeExpanded";
 
     const jobTitleH3 = document.createElement("h3");
     const jobTitleH3T = document.createTextNode(jobRole);
@@ -111,15 +114,76 @@ function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescr
     const jobDescriptionPT = document.createTextNode(jobDescription);
     jobDescriptionP.appendChild(jobDescriptionPT);
 
+    const descriptionP = document.createElement("p");
+    descriptionP.id = "description";
+    const descriptionPT = document.createTextNode("Description");
+    descriptionP.appendChild(descriptionPT);
+
+    const applyB = document.createElement("button");
+    applyB.id = "applyBtn";
+    const applyBT = document.createTextNode("Apply");
+    applyB.onclick = () => {
+        applyB.innerText = "Sent CV!";
+        applyB.style.backgroundColor = "lightgreen";
+        applyB.style.color = "black";
+        
+        eachJobDiv.style.height.value = eachJobDiv.style.height.value + 20;
+        undoApplyB.style.display = "block";
+        returnB.style.display = "block";
+
+        applyB.onmouseover = () => {};
+        applyB.onmouseleave = () => {};
+    };
+    applyB.appendChild(applyBT);
+
+    const undoApplyB = document.createElement("button");
+    undoApplyB.id = "undoApplyBtn";
+    const undoApplyBT = document.createTextNode("Undo");
+    undoApplyB.onclick = () => {
+        applyB.id = "applyBtn";
+        applyB.innerHTML = "Apply";
+        applyB.style.backgroundColor = "#e45d74";
+        applyB.onmouseover = () => {
+            applyB.style.backgroundColor = "#cf566a";
+        }
+        applyB.onmouseleave = () => {
+            applyB.style.backgroundColor = "#e45d74";
+        }
+        undoApplyB.style.display = "none";
+        eachJobDiv.style.height.value = eachJobDiv.style.height.value + 20;
+    };
+    undoApplyB.appendChild(undoApplyBT);
+
+    const returnB = document.createElement("button");
+    returnB.id = "returnBtn";
+    const returnBT = document.createTextNode("Return");
+    returnB.onclick = () => {
+        searchJob();
+    };
+    returnB.appendChild(returnBT);
+
+
     eachJobDiv.appendChild(companyLogo);
     eachJobDiv.appendChild(companyNameAndAddressDiv);
     eachJobDiv.appendChild(jobTitleAndTypeDiv);
+    eachJobDiv.appendChild(descriptionP);
     eachJobDiv.appendChild(jobDescriptionP);
+    eachJobDiv.appendChild(applyB);
+    eachJobDiv.appendChild(undoApplyB);
+    eachJobDiv.appendChild(returnB);
     
+        
     document.getElementById("jobListings").appendChild(eachJobDiv);
 
-
 }
+
+function undoApplyToJob(){
+    let applyB = document.getElementById("applyBtn");
+    applyB.innerText = "Apply";
+    applyB.style.backgroundColor = "#e45d74";    
+}
+
+
 
 // Display Recent Searches
 function insertRecentSearchesHTML(searchedTerm){
@@ -142,6 +206,7 @@ function insertRecentSearches(){
 // Search Job
 let amountOfFoundJobs = jobs.length;
 function searchJob(){
+    location.reload();
     jobListings.innerHTML = "";
     let searchedTerm = document.getElementById("searchedJob").value; 
     let searchedLocation = document.getElementById("searchedLocation").value; 

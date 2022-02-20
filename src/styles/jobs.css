@@ -223,16 +223,6 @@ nav  li a {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#eachJobExpanded {
-    height: 200px;
-    width: 89%;
-    background-color: #d9dfeca2;
-    border-radius: 20px;
-    padding: 10px 30px 10px 10px;
-    margin-bottom: 30px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
 #eachJob:hover {
     background-color: #c8cdda94;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -248,11 +238,54 @@ nav  li a {
     margin-bottom: 4px;
 }
 
+
+#eachJobExpanded {
+    height: 490px;
+    width: 89%;
+    background-color: #d9dfeca2;
+    border-radius: 20px;
+    padding: 10px 30px 10px 10px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#companyLogosExpanded {
+    float: left;
+    width: 250px;
+    height: 150px;
+    margin: 10px auto;
+    border-radius: 20px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+#companyNameAndAddressExpanded {
+    text-align: left;
+    margin-top: 180px;    
+    margin-left: 20px;
+}
+
+#jobTitleAndTypeExpanded {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#description {
+    margin-top: 20px;    
+    margin-left: 20px;
+    font-size: 25px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
 #jobTitleAndType {
     float: right;
     margin-top: 25px;
     text-align: right;
 }
+
 #jobTitle {
     margin-bottom: 6px;
 }
@@ -297,8 +330,9 @@ nav  li a {
     margin-left: 20px;
 }
 
+
 #jobDescription {
-    margin-top: 120px;
+    margin-top: 10px;    
     margin-left: 20px;
     text-align: left;
     font-weight: bold;
@@ -397,6 +431,61 @@ nav  li a {
     color: #cf566a;
 }
 
+#applyBtn {
+    padding: 10px 80px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #e45d74;
+    color: white;
+    border: none;
+    margin-top: 25px;
+    float: left;
+    margin-bottom: 100px;
+    margin-left: 20px;
+}
+
+#applyBtn:hover {
+    background-color: #cf566a;
+}
+
+#undoApplyBtn {
+    padding: 10px 80px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    margin-top: 25px;
+    float: left;
+    margin-bottom: 100px;
+    margin-left: 20px;
+    display: none;
+}
+
+#undoApplyBtn:hover {
+    background-color: rgb(4, 161, 4);
+}
+
+#returnBtn {
+    padding: 10px 80px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #e45d74;
+    color: white;
+    border: none;
+    margin-top: 25px;
+    float: left;
+    margin-bottom: 100px;
+    margin-left: 20px;
+}
+
+#returnBtn:hover {
+    background-color: #cf566a;
+
+}
 
 /* Footer */
 footer {
