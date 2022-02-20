@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ቀጣሪ</title>
+    <link rel="shortcut icon" type="x-icon" href="ቀጣሪ-logos_black.png">
+</head>
+
+<body>
+    <!-- Header table -->
+    <table width="100%">
+        <tr>
+            <!-- Logo -->
+            <td> <img src="assets\logo\ቀጣሪ-logos_transparent.png" width="120px"> </td>
+            <!-- Navigation Links -->
+            <td align="right">
+                <!-- I used another table for the links so we can have the freedom to space individual links -->
+                <table cellpadding="6px" valign="center">
+                    <tr>
+                        <td>
+                            <a href="home.html"> Home </a>
+                        </td>
+                        <td>
+                            |
+                        </td>
+                        <td>
+                            <a href="#"> Post Jobs </a>
+                        </td>
+                        <td>
+                            <a href="#"> Find Jobs </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                Logout
+                                <img src="assets\icons\logoutIcon.png" width="12px">
+                            </a>
+                        </td>
+                        <td>
+                            <a> </a>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+    <!-- End Header -->
+    <table width="100%" cellspacing="50px">
+        <tr height="350px">
+            <td align="right"> <img src="assets\illustrations\account.svg" width="450px"> </td>
+            <td align="center" width="300px">
+                <h2> Fill Your Profile <br />and Generate Standard Cv </h2>
+                <a href="#Profile"><button> Go To Profile </button></a>
+            </td>
+            <td align="left"> <img src="assets\illustrations\profile.svg" width="470px"> </td>
+        </tr>
+    </table>
+    <!-- Content -->
+    <!-- Profile Form With Cv Section-->
+
+    <table width="80%" align="center" valign="middle" cellpadding="6px">
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>
+                        <h1 id="Profile">Profile</h1>
+                    </legend>
+                    <table width="50%" align="center" cellpadding="6px">
+                        <tr align="top">
+                            <form>
+                                <table cellpadding="6px">
+                                    <tr>
+                                        <td>First Name</td>
+                                        <td><input type="text" name="text" required size="20%" maxlength="50"
+                                                placeholder="First Name">
+                                        </td>
+                                        <td>Last Name</td>
+                                        <td><input type="text" name="text" required size="20%" maxlength="50"
+                                                placeholder="Last Name">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number</td>
+                                        <td>
+                                            <input type="tel" name="number" required size="20%"
+                                                placeholder="Phone Number">
+                                        </td>
+                                        <td>Age</td>
+                                        <td>
+                                            <input type="number" name="number" placeholder="Age">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Profession</td>
+                                        <td><input type="text" name="text" required size="20%" maxlength="50"
+                                                placeholder="Profession">
+                                        </td>
+                                        <td>City</td>
+                                        <td><input type="text" name="text" required size="20%" maxlength="50"
+                                                placeholder="City">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Region</td>
+                                        <td><input type="text" name="text" required size="20%" maxlength="50"
+                                                placeholder="Region">
+                                        </td>
+                                        <td>Country</td>
+                                        <td><input type="text" name="text" required size="20%" maxlength="50"
+                                                placeholder="Country">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zip Code</td>
+                                        <td><input type="number" name="number" size="20%" maxlength="50"
+                                                placeholder="Zip Code">
+                                        </td>
+                                        <td>Social Media</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Social"></td>
+                                    </tr>
+                                </table>
+                                <!--Work History or CV-->
+
+                                <table cellpadding="6px">
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                        <h3>Work History</h3>
+                                    </tr>
+                                    <tr>
+                                        <td>Job Title</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Job Title">
+                                        </td>
+                                        <td><br/></td>
+                                        <td>Employer</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50" placeholder="Text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Start Date</td>
+                                        <td><input type="date" name="date" size="20%" maxlength="50">
+                                        </td>
+                                        <td><br/><br></td>
+                                        <td>End Date</td>
+                                        <td><input type="date" name="date" size="20%" maxlength="50">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--End Work History or CV-->
+                                <!--Education-->
+                                <table cellpadding="6px">
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                        <h3>Education</h3>
+                                    </tr>
+                                    <tr>
+                                        <td>School Name</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="School Name">
+                                        </td>
+                                        <td><br/></td>
+                                        <td>School Location</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="School Location">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>School Location</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="School Location">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Start Date</td>
+                                        <td><input type="date" name="date" size="20%" maxlength="50">
+                                        </td>
+                                        <td><br/></td>
+                                        <td>End Date</td>
+                                        <td><input type="date" name="date" size="20%" maxlength="50">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="Degree">Degree: </label>
+                                            <select id="Degree" name="Degree" aria-placeholder="Degree">
+                                                <option value="">Select Degree</option>
+                                                <option value="High School Diploma">High School Diploma</option>
+                                                <option value="Bachelor of Arts">Bachelor of Arts</option>
+                                                <option value="Bachelor of Science">Bachelor of Science</option>
+                                                <option value="Masters of Arts">Masters of Arts</option>
+                                                <option value="Masters of Science">Masters of Science</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--End Education-->
+                                <!--Skills-->
+                                <table cellpadding="6px">
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                        <h3>Skills</h3>
+                                    </tr>
+                                    <tr>
+                                        <td>Skill 1</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Skill">
+                                        </td>
+                                        <td>Level</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Level">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Skill 2</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Skill">
+                                        </td>
+                                        <td>Level</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Level">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Skill 3</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Skill">
+                                        </td>
+                                        <td>Level</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Level">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Skill 4</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Skill">
+                                        </td>
+                                        <td>Level</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Level">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--End Skills-->
+                                <!--Languages-->
+                                <table cellpadding="6px">
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                        <h3>Languages</h3>
+
+                                    </tr>
+                                    <tr>
+                                        <td>First Language</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Language">
+                                        </td>
+                                        <td>Level</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Level">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Second Language</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Language">
+                                        </td>
+                                        <td>Level</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Level">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Third Language</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Language">
+                                        </td>
+                                        <td>Level</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Level">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--End Languages-->
+                                <!--References-->
+                                <table cellpadding="6px">
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                        <h3>References</h3>
+                                    </tr>
+                                    <tr>
+                                        <td>First Reference Name</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50" placeholder="Name">
+                                        </td>
+                                        <td>Phone</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Phone">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Second Reference Name</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50" placeholder="Name">
+                                        </td>
+                                        <td>Phone</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Phone">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Third Reference Name</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50" placeholder="Name">
+                                        </td>
+                                        <td>Phone</td>
+                                        <td><input type="text" name="text" size="20%" maxlength="50"
+                                                placeholder="Phone">
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <!--End References-->
+                                <!--summary-->
+                                <table cellpadding="6px">
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                        <h3>Summary</h3>
+
+                                    </tr>
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td>
+                                            <textarea name="text" rows="10" cols="50"
+                                                placeholder="Briefly tell us about your background"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--End summary-->
+                                <!--Submit-->
+                                <input type="submit" name="submit" value="Submit">
+                                <!--End Submit-->
+                            </form>
+                        </tr>
+                    </table>
+                </fieldset>
+        </tr>
+        </td>
+    </table>
+
+    <!-- End Profile Form With Cv Section-->
+    <!-- Footer -->
+    <table width="100%">
+        <tr height="10px">
+            <td align="center"> ቀጣሪ &copy; 2022 </td>
+        </tr>
+    </table>
+    <!-- End Footer -->
+</body>
+
+</html>

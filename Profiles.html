@@ -49,41 +49,43 @@
           <p>Please enter the required information to proceed.</p>
         </div>
 
-        <form action="signup.html">
+        <form action="landing.html" name="myForm" onsubmit="return validate()">
           <div>
             <div class="input-section-wrapper">
               <h3 class="input-title">Profile</h3>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="First name" />
-                <input type="text" placeholder="Lasts name" />
+                <input type="text" name="fname" placeholder="First name" />
+                <input type="text" name="lname" placeholder="Lasts name" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Phone Number" />
-                <input type="text" placeholder="Age" />
+                <input type="tel" name="pnumber" placeholder="Phone Number"
+                pattern="[0-9]{10}" minlength="10" maxlength="12" />
+                <label style="font-size:smaller;">Birthday</label> 
+                <input type="Date" name="age" placeholder="Age"/>
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Profession" />
-                <input type="text" placeholder="City" />
+                <input type="text" name="profession" placeholder="Profession" />
+                <input type="text" name="city" placeholder="City" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Region" />
-                <input type="text" placeholder="Country" />
+                <input type="text" name="region" placeholder="Region" />
+                <input type="text" name="country" placeholder="Country" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Zip Code" />
-                <input type="text" placeholder="Social Media" />
+                <input type="text" name="zcode" placeholder="Zip Code" />
+                <input type="text" name="smedia" placeholder="Social Media" />
               </div>
             </div>
 
             <div class="input-section-wrapper">
               <h3 class="input-title">Work History</h3>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Job Title" />
-                <input type="text" placeholder="Employer" />
+                <input type="text" name="jtitle" placeholder="Job Title" />
+                <input type="text" name="employer" placeholder="Employer" />
               </div>
               <div class="two-input-wrapper">
-                <input type="date" />
-                <input type="date" />
+                <input name="jobStartDate" type="date" />
+                <input name="jobEndDate" type="date" />
               </div>
             </div>
           </div>
@@ -92,31 +94,31 @@
             <div class="input-section-wrapper">
               <h3 class="input-title">Education</h3>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="School Name" />
-                <input type="text" placeholder="School Location" />
+                <input type="text" name="sname" placeholder="School Name" />
+                <input type="text" name="slocation" placeholder="School Location" />
               </div>
               <div class="two-input-wrapper">
-                <input type="date" />
-                <input type="date" />
+                <input name="schoolStartDate" type="date" />
+                <input name="schoolEndDate" type="date" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Select Degree" />
+                <input type="text" name="degree" placeholder="Select Degree" />
               </div>
             </div>
 
             <div class="input-section-wrapper">
               <h3 class="input-title">Skills</h3>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Skill 1" />
-                <input type="text" placeholder="Level 2" />
+                <input type="text" name="skill1" placeholder="Skill 1" />
+                <input type="text" name="skillLevel1" placeholder="Level 2" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Skill 1" />
-                <input type="text" placeholder="Level 2" />
+                <input type="text" name="skill2" placeholder="Skill 2" />
+                <input type="text" name="skillLevel2" placeholder="Level 2" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Skill 1" />
-                <input type="text" placeholder="Level 2" />
+                <input type="text" name="skill3" placeholder="Skill 3" />
+                <input type="text" name="skillLevel3" placeholder="Level 2" />
               </div>
             </div>
           </div>
@@ -125,37 +127,40 @@
             <div class="input-section-wrapper">
               <h3 class="input-title">Profile</h3>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="First Language" />
-                <input type="text" placeholder="Level" />
+                <input type="text" name="flanguage" placeholder="First Language" />
+                <input type="text" name="fLangLevel" placeholder="Level" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Second Language" />
-                <input type="text" placeholder="Level" />
+                <input type="text" name="slanguage" placeholder="Second Language" />
+                <input type="text" name="sLangLevel" placeholder="Level" />
               </div>
             </div>
 
             <div class="input-section-wrapper">
               <h3 class="input-title">References</h3>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="First Reference Name" />
-                <input type="text" placeholder="Phone" />
+                <input type="text" name="fRefName" placeholder="First Reference Name" />
+                <input type="tel" pattern="[0-9]{10}" minlength="10" maxlength="12" name="fRefPhone" placeholder="Phone" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Second Reference Name" />
-                <input type="text" placeholder="Phone" />
+                <input type="text" name="sRefName" placeholder="Second Reference Name" />
+                <input type="tel" pattern="[0-9]{10}"
+                 minlength="10" maxlength="12" name="sRefPhone" placeholder="Phone" />
               </div>
               <div class="two-input-wrapper">
-                <input type="text" placeholder="Third Reference Name" />
-                <input type="text" placeholder="Phone" />
+                <input type="text" name="tRefName" placeholder="Third Reference Name" />
+                <input type="tel" pattern="[0-9]{10}"
+                 maxlength="10" maxlength="1" name="tRefPhone" placeholder="Phone" />
               </div>
             </div>
           </div>
 
-          <button class="form-save" type="submit">SAVE</button>
+          <button class="form-save" type="submit" onsubmit="return validate()">SAVE</button>
         </form>
       </div>
     </body>
-
+    <script src="./src/js/profile.js">      
+    </script>
     <!-- Footer -->
     <footer>
       <p>Ketari &copy; 2022 All Rights Reserved!</p>
