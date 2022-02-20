@@ -44,8 +44,6 @@ nav  li a {
     text-decoration: none;
 }
 
-
-
 .section{
     margin-top: 20px;
     width: 85%;
@@ -139,6 +137,18 @@ nav  li a {
     transition: 1s ease;
 }
 
+.content .article p a{
+    text-decoration: none;
+    color: #cf566a;
+    padding: 4px 10px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.content .article p a:hover{
+    color: #28376a;
+    transition: 1s ease;
+}
 footer {
     position: relative;
     left: 0;
@@ -153,3 +163,62 @@ footer {
 footer p{
     padding-top: 10px;
 }
+
+@media screen and (max-width:768px){
+    .section{
+        align-items: center;
+        padding-left: 25px;
+    }
+    .section .container{
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: auto;
+        padding: 20px;
+    }
+    .content{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .container .title h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .container .article .button{
+        text-align: center;
+    }
+    .container .article .button a{
+        padding: 6px 5px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+    #logoImage{
+    width: 60px;
+    height: auto;
+    float: left;
+   
+    }
+  }
