@@ -362,7 +362,7 @@ flex-direction: column;
 }
 
 .foot-links h3 {
-  color: #cccccc;
+  color: #868282;
   font-weight: bolder;
   margin: 10px 0px 10px 0px;
 }
@@ -376,7 +376,7 @@ flex-direction: column;
 }
 footer > p {
   color: #cccccc;
-  margin-top: 20px;
+  margin-top: 60px;
   padding-top: 20px;
   border-top: solid rgba(14, 8, 8, 0.356) 2px;
 }
