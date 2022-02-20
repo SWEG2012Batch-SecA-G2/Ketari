@@ -6,8 +6,6 @@ header {
     border-radius: 17px;
     border: 1px solid #28376a;
     background-color: #28376a;
-    
-
 }
 
 #logoImage {
@@ -69,7 +67,8 @@ form{
     padding: 2vw 4vw;
     width: 90%;
     max-width: 600px;
-    border-radius: 10px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px 0 rgba(247, 243, 243, 0.2);
 }
 h3{
     text-align: center;
@@ -79,11 +78,11 @@ form h3{
     color: #555;
     font-weight: 800;
     margin-bottom: 20px;
-    
 }
 
 form input, form textarea{
     border: 0;
+    border-radius: 10px;
     margin: 10px 0;
     padding: 20px;
     outline: none;
