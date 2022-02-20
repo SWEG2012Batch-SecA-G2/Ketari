@@ -44,8 +44,6 @@ nav  li a {
     text-decoration: none;
 }
 
-
-
 .section{
     margin-top: 20px;
     width: 85%;
@@ -167,8 +165,12 @@ footer p{
 }
 
 @media screen and (max-width:768px){
+    .section{
+        align-items: center;
+        padding-left: 25px;
+    }
     .section .container{
-        width: 80%;
+        width: 90%;
         height: auto;
         display: block;
         margin: auto;
