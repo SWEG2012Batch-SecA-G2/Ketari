@@ -13,6 +13,27 @@
     padding: 40px 0px 40px;
     z-index: -1;
 }
+header {
+    margin: 5px 5px 15% 5px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid #28376a;
+    background-color: #28376a;
+}
+#logoImage {
+    width: 10%;
+    height: auto;
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#bannerImage {
+    float: right;
+    width: 20%;
+    margin: -250px 150px 0px 0px;
+}
 
 #newJobPostForm h1 {
     padding: 20px 0px 10px;
@@ -98,3 +119,16 @@
     background-color: #4ec780;
 
 }
+@media (max-width: 991px){
+    #bannerImage{
+      width: 0px;
+      display: none;
+    }
+    header{
+      height: 30%;
+      margin-bottom: 15%;
+    }
+    h5{
+        margin-bottom: 10%;
+    }
+  }
