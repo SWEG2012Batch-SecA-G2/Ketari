@@ -34,6 +34,13 @@
     font-size: 15px;
 }
 
+.error{
+    font-size: 14px;
+    margin-left: 20px;
+    font-family: monospace;
+    color: red;
+}
+
 #inputSubContainer {
     text-align: left;
     background-color: #f1f1f1;

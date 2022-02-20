@@ -48,22 +48,30 @@
             <h3> Please fill out all the required inputs in the form!</h3>
 
             <div id="newJobPostInputs">
-                <div id="inputSubContainer">
-                    <h3> About Company </h3>
-                    <input id="companyLogo" type="text" placeholder="link to company logo" required>
-                    <input id="companyName" type="text" placeholder="company name" required>
-                    <input id="location" type="text" placeholder="location" required>
-                </div>
-                <div id="inputSubContainer">
-                    <h3> About Job </h3>
-                    <input id="jobRole" type="text" placeholder="job role" required>
-                    <input id="jobType" type="text" placeholder="job type" required>
-                    <input id="description" type="text" placeholder="description" required>
-                </div>
-                <input id="submitJobBtn" onclick="postJob()" type="submit" value="Submit New Job" >
-                <button id="undoSubmissionBtn" onclick="undoPostJob()"> Undo </button>
-                </div>
-        </div>
+                <form >
+                    <div id="inputSubContainer">
+                        <h3> About Company </h3>
+                        <input id="companyLogo" type="text" placeholder="link to company logo" required>
+                        <span class="error" id="logoErr"></span>
+                        <input id="companyName" type="text" placeholder="company name" required>
+                        <span class="error" id="nameErr"></span>
+                        <input id="location" type="text" placeholder="location" required>
+                        <span class="error" id="locationErr"></span>
+                    </div>
+                    <div id="inputSubContainer">
+                        <h3> About Job </h3>
+                        <input id="jobRole" type="text" placeholder="job role" required>
+                        <span class="error" id="roleErr"></span>
+                        <input id="jobType" type="text" placeholder="job type" required>
+                        <span class="error" id="typeErr"></span>
+                        <input id="description" type="text" placeholder="description" required>
+                        <span class="error" id="descriptionErr"></span>
+                    </div>
+                    <input id="submitJobBtn" onclick="return postJob()" type="submit" value="Submit New Job" >
+                    <button id="undoSubmissionBtn" onclick="undoPostJob()"> Undo </button>
+                    </div>
+                </form>
+            </div>
 
         
         <!-- Footer -->
