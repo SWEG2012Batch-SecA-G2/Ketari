@@ -153,3 +153,41 @@ footer {
 footer p{
     padding-top: 10px;
 }
+
+@media screen and (max-width:768px){
+    .section .container{
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: auto;
+        padding: 20px;
+    }
+    .content{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .container .title h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .container .article .button{
+        text-align: center;
+    }
+    .container .article .button a{
+        padding: 6px 5px;
+        font-size: 16px;
+    }
+}
