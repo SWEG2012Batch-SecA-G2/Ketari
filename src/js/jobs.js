@@ -158,7 +158,7 @@ function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescr
     returnB.id = "returnBtn";
     const returnBT = document.createTextNode("Return");
     returnB.onclick = () => {
-        searchJob();
+        searchJob(0);
     };
     returnB.appendChild(returnBT);
 
@@ -205,8 +205,10 @@ function insertRecentSearches(){
 
 // Search Job
 let amountOfFoundJobs = jobs.length;
-function searchJob(){
-    location.reload();
+function searchJob(state){
+    if(state == 1){
+        location.reload();
+    }
     jobListings.innerHTML = "";
     let searchedTerm = document.getElementById("searchedJob").value; 
     let searchedLocation = document.getElementById("searchedLocation").value; 

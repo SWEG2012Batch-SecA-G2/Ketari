@@ -209,9 +209,6 @@ nav  li a {
     align-self: center;
 }
 
-#companyLogos:hover {
-    
-}
 
 #eachJob {
     height: 100px;
@@ -240,7 +237,7 @@ nav  li a {
 
 
 #eachJobExpanded {
-    height: 490px;
+    height: 540px;
     width: 89%;
     background-color: #d9dfeca2;
     border-radius: 20px;
@@ -252,7 +249,7 @@ nav  li a {
 #companyLogosExpanded {
     float: left;
     width: 250px;
-    height: 150px;
+    height: 190px;
     margin: 10px auto;
     border-radius: 20px;
     align-self: center;
@@ -261,7 +258,7 @@ nav  li a {
 
 #companyNameAndAddressExpanded {
     text-align: left;
-    margin-top: 180px;    
+    margin-top: 230px;    
     margin-left: 20px;
 }
 
