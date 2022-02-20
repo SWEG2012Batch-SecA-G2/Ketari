@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+  font-weight: normal;
+}
+
+section > div > h2,
+section > div > h1,
+section > div > p,
+section > div > ul{
+  color: black;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+section > div > ul >li {
+  color: black;
+  font-weight: bold;
+  margin-right: -50px;
+}
+
+#list {
+  list-style: circle;
+}
+
+.container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.content {
+  width: 70%;
+  /* color: black; */
+  background-color: #f1f1f1;
+  /* width: 650px; */
+  border-radius: 20px;
+  margin: 20px auto;
+  margin-top: -200px;
+  margin-bottom: 200px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.4);
+  padding: 90px 90px 90px;
+  z-index: 10;
+}
+
+@media (max-width: 720px) {
+    section > div > h2,
+section > div > h1,
+section > div > p,
+section > div > ul {
+  color: black;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.content {
+    padding: 20px 20px 20px;
+
+}
+
+}

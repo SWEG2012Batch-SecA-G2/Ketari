@@ -112,6 +112,59 @@ header {
   color: #cf566a;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 20px;
+  background-color: #e9e5e5;
+}
+
+@media (max-width: 760px){
+  
+  .banner-image {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-bar-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #28376a;
+    width: 95%;
+    align-items: center;
+    transition: 0.3s;
+  }
+
+  .links {
+    margin: 16px 0;
+  }
+
+  .nav-bar-links.active {
+    left: 10px
+  }
+}
+
 .cta {
   display: flex;
   align-items: center;
