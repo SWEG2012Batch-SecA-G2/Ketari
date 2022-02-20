@@ -74,16 +74,17 @@ a {
 
 /* Header */
 header {
-    margin: 5px;
-    height: 64vh;
+    margin: 5px 5px 0px 5px;
+    width: 100%;
+    height: auto;
     border-radius: 20px;
     border: 1px solid #28376a;
     background-color: #28376a;
 }
 
 #logoImage {
-    width: 160px;
-    height: 50px;
+    width: 25%;
+    height: auto;
     float: left;
     margin-top: 15px;
     margin-left: 10px;
@@ -114,7 +115,7 @@ nav  li a {
 
 #intro {
     color: #eeeeee;
-    margin: 20vh 10vh 0vh;
+    margin: 15% 2% 2% 15%;
     font-size: 25px;
     width: 45%;
 }
@@ -126,8 +127,8 @@ nav  li a {
 
 #bannerImage {
     float: right;
-    width: 420px;
-    margin-top: -260px;
+    width: 20%;
+    margin-top: -300px;
     margin-right: 160px;
 }
 #searchIcon {
@@ -151,7 +152,7 @@ nav  li a {
 /* ================ */
 
 .body-wrapper {
-  width: 1000px;
+  width: 85%;
   margin: auto;
   padding: 30px;
   box-shadow: 0 10px 10px 2px var(--color-dark-silver);
@@ -251,3 +252,15 @@ footer p {
 /* ================ */
 /* footer ends here */
 /* ================ */
+@media (max-width: 991px){
+  .body-wrapper form > div{
+    display: block;
+  }
+  #bannerImage{
+    display: none;
+  }
+  header{
+    height: auto;
+    margin-bottom: 5%;
+  }
+}
