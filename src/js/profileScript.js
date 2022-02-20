@@ -1,3 +1,4 @@
+
 var loggedUser=JSON.parse(localStorage.getItem("loggedUser"))
     var p = JSON.parse(localStorage.getItem("profiles"))
 	var found=false;
