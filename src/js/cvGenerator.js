@@ -12,7 +12,7 @@ function validate() {
     var employer = document.forms["myForm"]["employer"].value;
     var jobStartDate = document.forms["myForm"]["jobStartDate"].value;
     var jobEndDate = document.forms["myForm"]["jobEndDate"].value;
-    var sname = document.forms["myForm"]["sname"].value;
+    var schoolName = document.forms["myForm"]["schoolName"].value;
     var slocation = document.forms["myForm"]["slocation"].value;
     var schoolStartDate = document.forms["myForm"]["schoolStartDate"].value;
     var schoolEndDate = document.forms["myForm"]["schoolEndDate"].value;
@@ -70,7 +70,7 @@ function validate() {
         alert("Please enter your job end date");
         return false;
     }
-    if (sname == "") {
+    if (schoolName == "") {
         alert("Please enter your school name");
         return false;
     }
@@ -140,7 +140,7 @@ function storeForm() {
     var employer = form["employer"].value;
     var jobStartDate = form["jobStartDate"].value;
     var jobEndDate = form["jobEndDate"].value;
-    var sname = form["sname"].value;
+    var schoolName = form["schoolName"].value;
     var slocation = form["slocation"].value;
     var schoolStartDate = form["schoolStartDate"].value;
     var schoolEndDate = form["schoolEndDate"].value;
@@ -168,7 +168,8 @@ function storeForm() {
       pnumber: "",
       age: "",
       profession: "",
-      city: ""
+      city: "",
+      schoolName:""
     };
     data.fname = fname;
     data.lname = lname;
@@ -184,7 +185,7 @@ function storeForm() {
     data.employer = employer;
     data.jobStartDate = jobStartDate;
     data.jobEndDate = jobEndDate;
-    data.sname = sname;
+    data.schoolName = schoolName;
     data.slocation = slocation;
     data.schoolStartDate = schoolStartDate;
     data.schoolEndDate = schoolEndDate;
