@@ -6,7 +6,7 @@ var f = window.location.href.split("?")[1]
 if(f=="tog"){
   toggleForm();
 }
-var regEx = /^([a-zA-Z_\.]+)@([a-zA-Z_\.]+)\.([a-zA-z]{2,5})$/;
+var regEx = /[^@ \t\r\n0-9]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 
 function User(username,email,password){
   this.username = username;
@@ -64,7 +64,7 @@ function validateSignup(){
     document.getElementById("nameError").innerHTML = "";
 
   if(!checkEmail){
-    document.getElementById("emailError").innerHTML = "Please Enter email!";
+    document.getElementById("emailError").innerHTML = "Please Enter a valid email!";
     return false;
   }
   else
