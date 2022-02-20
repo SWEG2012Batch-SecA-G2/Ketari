@@ -116,88 +116,116 @@ function validate() {
         return false;
     }
 }
-function store(){
-    var region = document.forms["myForm"]["region"].value;
-    var profession = document.forms["myForm"]["profession"].value;
-    var smedia = document.forms["myForm"]["smedia"].value;
-    var skill2 = document.forms["myForm"]["skill2"].value;
-    var skill3 = document.forms["myForm"]["skill3"].value;
-    var sRefName = document.forms["myForm"]["sRefName"].value;
-    var sRefPhone = document.forms["myForm"]["sRefPhone"].value;
-    var tRefName = document.forms["myForm"]["tRefName"].value;
-    var tRefPhone = document.forms["myForm"]["tRefPhone"].value;
-    var slanguage = document.forms["myForm"]["slanguage"].value;
-    var sLangLevel = document.forms["myForm"]["slevel"].value;
-    var skillLevel2 = document.forms["myForm"]["skillLevel2"].value;
-    var skillLevel3 = document.forms["myForm"]["skillLevel3"].value;
-    var fname = document.forms["myForm"]["fname"].value;
-    var lname = document.forms["myForm"]["lname"].value;
-    var phoneNumber = document.forms["myForm"]["pnumber"].value;
-    var age = document.forms["myForm"]["age"].value;
-    var country = document.forms["myForm"]["country"].value;
-    var city = document.forms["myForm"]["city"].value;
-    var zcode = document.forms["myForm"]["zcode"].value;
-    var jtitle = document.forms["myForm"]["jtitle"].value;
-    var employer = document.forms["myForm"]["employer"].value;
-    var jobStartDate = document.forms["myForm"]["jobStartDate"].value;
-    var jobEndDate = document.forms["myForm"]["jobEndDate"].value;
-    var sname = document.forms["myForm"]["sname"].value;
-    var slocation = document.forms["myForm"]["slocation"].value;
-    var schoolStartDate = document.forms["myForm"]["schoolStartDate"].value;
-    var schoolEndDate = document.forms["myForm"]["schoolEndDate"].value;
-    var degree = document.forms["myForm"]["degree"].value;
-    var skill1 = document.forms["myForm"]["skill1"].value;
-    var skillLevel1 = document.forms["myForm"]["skillLevel1"].value;
-    var flanguage = document.forms["myForm"]["flanguage"].value;
-    var fLangLevel = document.forms["myForm"]["fLangLevel"].value;
-    var fRefName = document.forms["myForm"]["fRefName"].value;
-    var fRefPhone = document.forms["myForm"]["fRefPhone"].value;
-
-    let profileObj = {
-        "fname": fname,
-        "lname": lname,
-        "phoneNumber": phoneNumber,
-        "age": age,
-        "country": country,
-        "city": city,
-        "zcode": zcode,
-        "jtitle": jtitle,
-        "employer": employer,
-        "jobStartDate": jobStartDate,
-        "jobEndDate": jobEndDate,
-        "sname": sname,
-        "slocation": slocation,
-        "schoolStartDate": schoolStartDate,
-        "schoolEndDate": schoolEndDate,
-        "degree": degree,
-        "skill1": skill1,
-        "skillLevel1": skillLevel1,
-        "flanguage": flanguage,
-        "fLangLevel": fLangLevel,
-        "fRefName": fRefName,
-        "fRefPhone": fRefPhone,
-        "region": region,
-        "profession": profession,
-        "smedia": smedia,
-        "skill2": skill2,
-        "skill3": skill3,
-        "sRefName": sRefName,
-        "sRefPhone": sRefPhone,
-        "tRefName": tRefName,
-        "tRefPhone": tRefPhone,
-        "slanguage": slanguage,
-        "sLangLevel": sLangLevel,
-        "skillLevel2": skillLevel2,
-        "skillLevel3": skillLevel3
+function storeForm() {
+    var form = document.forms["myForm"];
+    var person = JSON.parse(localStorage.getItem("loggedUser"))
+    var username="";
+    if (person == null) {
+      return alert("login first");
+    }else{
+      username = person.username;
     }
-
-    localStorage.setItem("profile", JSON.stringify(profileObj));
-    let oldProfile = JSON.parse(localStorage.getItem("profile"));
-    oldProfile.push(profileObj);
-    localStorage.clear();
-    localStorage.setItem("profile", JSON.stringify(oldProfile));
+    var fname = form["fname"].value;
+    var lname = form["lname"].value;
+    console.log(fname);
+    var pnumber = form["pnumber"].value;
+    var age = form["age"].value;
+    var profession = form["profession"].value;
+    var city = form["city"].value;
+    var region = form["region"].value;
+    var country = form["country"].value;
+    var zcode = form["zcode"].value;
+    var smedia = form["smedia"].value;
+    var jtitle = form["jtitle"].value;
+    var employer = form["employer"].value;
+    var jobStartDate = form["jobStartDate"].value;
+    var jobEndDate = form["jobEndDate"].value;
+    var sname = form["sname"].value;
+    var slocation = form["slocation"].value;
+    var schoolStartDate = form["schoolStartDate"].value;
+    var schoolEndDate = form["schoolEndDate"].value;
+    var degree = form["degree"].value;
+    var skill1 = form["skill1"].value;
+    var skillLevel1 = form["skillLevel1"].value;
+    var skill2 = form["skill2"].value;
+    var skillLevel2 = form["skillLevel2"].value;
+    var skill3 = form["skill3"].value;
+    var skillLevel3 = form["skillLevel3"].value;
+    var flanguage = form["flanguage"].value;
+    var fLangLevel = form["fLangLevel"].value;
+    var slanguage = form["slanguage"].value;
+    var sLangLevel = form["sLangLevel"].value;
+    var fRefName = form["fRefName"].value;
+    var fRefPhone = form["fRefPhone"].value;
+    var sRefName = form["sRefName"].value;
+    var sRefPhone = form["sRefPhone"].value;
+    var tRefName = form["tRefName"].value;
+    var tRefPhone = form["tRefPhone"].value;
+    var data = {
+      username:username,
+      fname: "",
+      lname: "",
+      pnumber: "",
+      age: "",
+      profession: "",
+      city: ""
+    };
+    data.fname = fname;
+    data.lname = lname;
+    data.pnumber = pnumber;
+    data.age = age;
+    data.profession = profession;
+    data.city = city;
+    data.region = region;
+    data.country = country;
+    data.zcode = zcode;
+    data.smedia = smedia;
+    data.jtitle = jtitle;
+    data.employer = employer;
+    data.jobStartDate = jobStartDate;
+    data.jobEndDate = jobEndDate;
+    data.sname = sname;
+    data.slocation = slocation;
+    data.schoolStartDate = schoolStartDate;
+    data.schoolEndDate = schoolEndDate;
+    data.degree = degree;
+    data.skill1 = skill1;
+    data.skillLevel1 = skillLevel1;
+    data.skill2 = skill2;
+    data.skillLevel2 = skillLevel2;
+    data.skill3 = skill3;
+    data.skillLevel3 = skillLevel3;
+    data.flanguage = flanguage;
+    data.fLangLevel = fLangLevel;
+    data.slanguage = slanguage;
+    data.sLangLevel = sLangLevel;
+    data.fRefName = fRefName;
+    data.fRefPhone = fRefPhone;
+    data.sRefName = sRefName;
+    data.sRefPhone = sRefPhone;
+    data.tRefName = tRefName;
+    data.tRefPhone = tRefPhone;
+    let profiles=[];
+    if(localStorage.getItem("profiles")===null){
+      profiles=[];
+    }
+    else{
+      profiles=JSON.parse(localStorage.getItem("profiles"));
+    }
+    profiles.push(data);
+    localStorage.setItem("profiles",JSON.stringify(profiles));
+  }
+function showprofilesData(){
+  var loggedUser = JSON.parse(localStorage.getItem("loggedUser"))
+  var profile = JSON.parse(localStorage.getItem("profiles"));
+  if (loggedUser == null) {
+    return alert("login first");
+  }else{
+    for(var i = 0; i < profile.length; i++){
+      if(profile[i].username == loggedUser.username){
+        return profile[i].age;
+      }
+    }
 }
-
-function loadData(){
-    
 }
+document.getElementById("hello").innerHTML = showprofilesData();

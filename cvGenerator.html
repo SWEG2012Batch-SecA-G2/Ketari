@@ -49,7 +49,7 @@
           <p>Please enter the required information to proceed.</p>
         </div>
 
-        <form action="landing.html" name="myForm" onsubmit="return validate()">
+        <form action="Profiles.html" name="myForm" onclick="showprofilesData()" onsubmit="return validate(), storeForm()">
           <div>
             <div class="input-section-wrapper">
               <h3 class="input-title">Profile</h3>
@@ -60,8 +60,7 @@
               <div class="two-input-wrapper">
                 <input type="tel" name="pnumber" placeholder="Phone Number"
                 pattern="[0-9]{10}" minlength="10" maxlength="12" />
-                <label style="font-size:smaller;">Birthday</label> 
-                <input type="Date" name="age" placeholder="Age"/>
+                <input type="number" name="age" placeholder="Age"/>
               </div>
               <div class="two-input-wrapper">
                 <input type="text" name="profession" placeholder="Profession" />
@@ -125,7 +124,7 @@
 
           <div>
             <div class="input-section-wrapper">
-              <h3 class="input-title">Profile</h3>
+              <h3 class="input-title">Language</h3>
               <div class="two-input-wrapper">
                 <input type="text" name="flanguage" placeholder="First Language" />
                 <input type="text" name="fLangLevel" placeholder="Level" />
@@ -155,8 +154,9 @@
             </div>
           </div>
 
-          <button class="form-save" type="submit" onsubmit="return validate()">SAVE</button>
+          <button class="form-save" type="submit">SAVE</button>
         </form>
+        <p id="hello">hello</p>
       </div>
     </body>
     <script src="./src/js/profile.js">      
