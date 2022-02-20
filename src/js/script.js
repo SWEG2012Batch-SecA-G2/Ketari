@@ -15,7 +15,8 @@ function User(username,email,password){
 }
 
 var admin = new User("admin","admin@admin.com","admin");
-createSession(admin);
+if(localStorage.getItem("user") == null)
+  createSession(admin);
 
 let logArr = [];
 
