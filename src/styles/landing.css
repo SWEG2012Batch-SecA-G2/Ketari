@@ -96,7 +96,7 @@ header {
 /* navigation bar links section  */
 .nav-bar-links {
   display: flex;
-  width: 30%;
+  width: 35%;
   justify-content: space-evenly;
 }
 
