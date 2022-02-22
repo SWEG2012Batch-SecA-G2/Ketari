@@ -216,6 +216,8 @@ function storeForm() {
     profiles.push(data);
     localStorage.setItem("profiles",JSON.stringify(profiles));
   }
+
+  /*
 function showprofilesData(){
   var loggedUser = JSON.parse(localStorage.getItem("loggedUser"))
   var profile = JSON.parse(localStorage.getItem("profiles"));
@@ -227,6 +229,8 @@ function showprofilesData(){
         return profile[i].age;
       }
     }
+    document.getElementById("hello").innerHTML = showprofilesData();
 }
 }
-document.getElementById("hello").innerHTML = showprofilesData();
+*/
+
