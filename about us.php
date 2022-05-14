@@ -12,9 +12,9 @@
         </div>
         <nav>
             <ul>
-                <li> <a href="postJob.html"> Post a Job </a> </li>
-                <li> <a href="signup.html"> Sign Up </a> </li>
-                <li> <a href="signup.html"> Sign In </a> </li>
+                <li> <a href="postJob.php"> Post a Job </a> </li>
+                <li> <a href="signup.php"> Sign Up </a> </li>
+                <li> <a href="signup.php"> Sign In </a> </li>
             </ul>
         </nav>
     </header>
@@ -35,7 +35,7 @@
                         Powered by a team of qualified staff and cutting-edge database system,
                         we remain the unrivaled platform in connecting private, local, and international 
                         employers hiring in Ethiopia with job seekers.</h3>
-                        <p> <b><a href="contact.html">Contact us</a> to learn more about our services.</b><br>
+                        <p> <b><a href="contact.php">Contact us</a> to learn more about our services.</b><br>
                             <br><b>Address:</b> Addis Ababa Science and Technology University. 
                             Akaky Kaliti subcity, Kilinto area. Addis Ababa, Ethiopia<br>
                            <br><b>POBox:</b>  1277 code 1110 Addis Ababa, Ethiopia<br>

@@ -24,10 +24,10 @@
         />
       </div>
       <div class="nav-bar-links">
-        <a class="links w-text" href="./signup.html">Log in</a>
-        <a class="links w-text" href="./signup.html?tog">Sign up</a>
-        <a class="links w-text" href="./faqs.html">FAQ</a>
-        <a class="links w-text" href="./about us.html">About us</a>
+        <a class="links w-text" href="./signup.php">Log in</a>
+        <a class="links w-text" href="./signup.php?tog">Sign up</a>
+        <a class="links w-text" href="./faqs.php">FAQ</a>
+        <a class="links w-text" href="./about us.php">About us</a>
       </div>
       <div class="hamburger">
         <span class="bar"></span>
@@ -49,8 +49,8 @@
             </h3>
 
             <div class="cta-container">
-              <a href="signup.html" class="cta-links">Log in</a>
-              <a href="signup.html?tog" class="cta-links">Sign up</a>
+              <a href="signup.php" class="cta-links">Log in</a>
+              <a href="signup.php?tog" class="cta-links">Sign up</a>
             </div>
           </div>
           <img
@@ -136,13 +136,13 @@
                 <p>Companies joined</p>
               </div>
             </div>
-            <a class="medium-txt" href="./about us.html">Learn More →</a>
+            <a class="medium-txt" href="./about us.php">Learn More →</a>
           </div>
         </div>
       </section>
 
       <h2 class="sub-title">Find your dream job and start earning!</h2>
-      <a class="get-str" href="signup.html">Get Started</a>
+      <a class="get-str" href="signup.php">Get Started</a>
     </div>
 
     <!-- Footer -->
@@ -151,16 +151,16 @@
       <div class="foot-links">
         <div class="f-link">
           <h3>Navigation</h3>
-          <p><a href="./signup.html">Log in</a></p>
-          <p><a href="./faqs.html">FAQ's</a></p>
-          <p><a href="./signup.html">Sign up</a></p>
-          <p><a href="./Profiles.html">Profile</a></p>
-          <p><a href="./about us.html">About us</a></p>
-          <p><a href="./postJob.html">Post Jobs</a></p>
+          <p><a href="./signup.php">Log in</a></p>
+          <p><a href="./faqs.php">FAQ's</a></p>
+          <p><a href="./signup.php">Sign up</a></p>
+          <p><a href="./Profiles.php">Profile</a></p>
+          <p><a href="./about us.php">About us</a></p>
+          <p><a href="./postJob.php">Post Jobs</a></p>
         </div>
         <div class="f-link">
           <h3>Terms</h3>
-          <p><a href="./terms.html">Term and Conditions</a></p>
+          <p><a href="./terms.php">Term and Conditions</a></p>
         </div>
         <div class="f-link">
           <h3>Contacts</h3>

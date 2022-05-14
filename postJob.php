@@ -10,16 +10,16 @@
         <header>
             <!-- Logo Image -->
             <div>
-                <a href="jobs.html">
+                <a href="jobs.php">
                     <img id="logoImage" src="assets\logo\ቀጣሪ-logos_white.png">
                  </a> 
             </div>
             <!-- Nav Links -->
             <nav>
                 <ul>
-                    <li> <a href="jobs.html"> Jobs </a> </li>
-                    <li> <a href="Profiles.html"> Profile </a> </li>
-                    <li> <a href="landing.html"> Sign Out </a> </li>
+                    <li> <a href="jobs.php"> Jobs </a> </li>
+                    <li> <a href="Profiles.php"> Profile </a> </li>
+                    <li> <a href="landing.php"> Sign Out </a> </li>
                 </ul>
             </nav>
             <!-- Banner Texts -->

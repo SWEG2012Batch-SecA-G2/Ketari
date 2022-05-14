@@ -15,7 +15,7 @@
           <div class="imgBx"><img src="assets/illustrations/undraw_enter_uhqk.png" alt="" /></div>
           <div class="formBx">
 
-            <form action="jobs.html" name="Login" onsubmit="return validateLogin(); ">
+            <form action="jobs.php" name="Login" onsubmit="return validateLogin(); ">
               <h2>Sign In</h2>
               <input type="text" name="LoginUsername" placeholder="Username" />
               <span id="usernameError" class="error"></span>
@@ -34,7 +34,7 @@
       <div class="user signupBx">
           <div class="formBx">
 
-            <form action="signup.html" name="Signup" onsubmit="return validateSignup();">
+            <form action="signup.php" name="Signup" onsubmit="return validateSignup();">
               <h2>Create an account</h2>
               <input type="text" name="SignupUsername" placeholder="Username" />
               <span id="nameError" class="error"></span>
