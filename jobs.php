@@ -9,16 +9,16 @@
         <!-- Header and Nav Bar -->
         <header>
             <div>
-               <a href="jobs.html">
+               <a href="jobs.php">
                   <img id="logoImage" src="assets\logo\ቀጣሪ-logos_white.png">
                </a> 
             </div>
             <nav>
                 <ul>
-                    <li> <a href="Profiles.html" id="loggedUser"> Profile </a> </li>
-                    <li> <a href="postJob.html"> Post a Job </a> </li>
-                    <li> <a href="cvGenerator.html"> Cv Generator </a> </li>
-                    <li> <a href="landing.html"> Sign Out </a> </li>
+                    <li> <a href="Profiles.php" id="loggedUser"> Profile </a> </li>
+                    <li> <a href="postJob.php"> Post a Job </a> </li>
+                    <li> <a href="cvGenerator.php"> Cv Generator </a> </li>
+                    <li> <a href="landing.php"> Sign Out </a> </li>
                 </ul>
             </nav>
             <div id="intro">
