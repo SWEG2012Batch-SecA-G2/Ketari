@@ -1,4 +1,17 @@
 --@block
+SELECT * from USER
+
+--@block
+-- DROP TABLE USER;
+CREATE TABLE user(
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    PRIMARY KEY(username)
+);
+
+
+--@block
 CREATE TABLE user(
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,

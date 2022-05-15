@@ -34,7 +34,7 @@
       <div class="user signupBx">
           <div class="formBx">
 
-            <form action="signup.php" name="Signup" onsubmit="return validateSignup();">
+            <form action="src/php/data.php" method="post" name="Signup" onsubmit="return validateSignup();">
               <h2>Create an account</h2>
               <input type="text" name="SignupUsername" placeholder="Username" />
               <span id="nameError" class="error"></span>
