@@ -2,6 +2,9 @@
 SELECT * from USER;
 
 --@block
+DELETE from USER;
+
+--@block
 DELETE FROM USER
 WHERE username="abelabebe";
 

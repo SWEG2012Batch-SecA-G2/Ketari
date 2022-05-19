@@ -8,8 +8,8 @@ if(f=="tog"){
 }
 var regEx = /[^@ \t\r\n0-9]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 
-function loginUser(){
-  document.getElementById('login').addEventListener('submit', function(e){
+function loginUser(e){
+ 
     e.preventDefault(); 
     getInfo();
     async function getInfo(){
@@ -20,38 +20,18 @@ function loginUser(){
       })
       .then(res => res.text())
       .then(data => response = data)
-      if(response =="Successful"){
+      if(response !=""){
+        localStorage.setItem("loggedUser",response);
+        // alert(response);
         window.location.href = "/ketari/jobs.html";
       }
       else
         alert("No Account Found. please try again!");
     }
-  });
 }
 
-function signupUser(){
-  document.getElementById('signup').addEventListener('submit',(e)=>{
-    e.preventDefault();
-    getInfo();
-    async function getInfo(){
-      var response;
-      await fetch('/ketari/src/php/datain.php',{
-        method: 'POST',
-        body: new FormData(document.getElementById('signup'))
-      })
-      .then(res => res.text())
-      .then(data => response = data)
-      if(response =="Successful"){
-        alert("Account Created Successfully!");
-      }
-      else
-        alert("Account already exists!");
-    }
 
-  })
-}
-
-function validateLogin(){
+function validateLogin(e){
   let username = document.forms["Login"]["LoginUsername"].value;
   let password = document.forms["Login"]["LoginPassword"].value;
   if(username == ""){
@@ -67,14 +47,34 @@ function validateLogin(){
   else
     document.getElementById("passError").innerHTML = "";
 
-  loginUser();
-
+  loginUser(e);
   // alert("No Account Found. please try again!");
   return false;
 }
 
+function signupUser(e){
+    e.preventDefault();
+    getInfo();
+    async function getInfo(){
+      var response;
+      await fetch('/ketari/src/php/dataIn.php',{
+        method: 'POST',
+        body: new FormData(document.getElementById('signup'))
+      })
+      .then(res => res.text())
+      .then(data => response = data)
+      if(response =="Successful"){
+        toggleForm();
+        alert("Account Created Successfully!");
+      }
+      else{
+        toggleForm();
+        alert("Account already exists! Please Login");
+      }
+    }
+}
 
-function validateSignup(){
+function validateSignup(e){
   let username = document.forms["Signup"]["SignupUsername"].value;
   let email = document.forms["Signup"]["SignupEmail"].value;
   let password = document.forms["Signup"]["SignupPassword"].value;
@@ -114,7 +114,7 @@ function validateSignup(){
     document.getElementById("cPasswordError").innerHTML = "";
 
 
-  signupUser();
+  signupUser(e);
   
   // toggleForm();
   return true;
