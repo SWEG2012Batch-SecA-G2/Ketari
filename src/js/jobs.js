@@ -1,10 +1,3 @@
-let loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
-
-try {
-    let loggedUserHTML = document.getElementById("loggedUser").innerText = loggedUser["username"];
-} catch (error) {
-    console.log("User didn't sign in properly!");
-}
 
 
 let jobs = JSON.parse(localStorage.getItem("jobs"));
