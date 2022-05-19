@@ -1,0 +1,20 @@
+function fetcher(){
+  var check = false;
+  document.getElementById("login").addEventListener("submit", function(e){
+    e.preventDefault();
+    fetch("/ketari/src/php/data.php",{
+      method: "POST", 
+      body: new FormData(document.getElementById("login"))
+    })
+      .then(response => response.text())
+      .then(data => {
+        console.log(data);
+        if(data == "true"){
+          // alert("redirecting...");
+          check = true;
+          window.location.href = "/ketari/jobs.html";
+        }
+      });
+  });
+  return check;
+}

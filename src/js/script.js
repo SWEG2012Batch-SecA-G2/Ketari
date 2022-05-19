@@ -8,19 +8,48 @@ if(f=="tog"){
 }
 var regEx = /[^@ \t\r\n0-9]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 
-function User(username,email,password){
-  this.username = username;
-  this.email = email;
-  this.password = password;
+function loginUser(){
+  document.getElementById('login').addEventListener('submit', function(e){
+    e.preventDefault(); 
+    getInfo();
+    async function getInfo(){
+      var response;
+      await fetch('/ketari/src/php/dataOut.php',{
+        method: 'POST',
+        body: new FormData(document.getElementById('login'))
+      })
+      .then(res => res.text())
+      .then(data => response = data)
+      if(response =="Successful"){
+        window.location.href = "/ketari/jobs.html";
+      }
+      else
+        alert("No Account Found. please try again!");
+    }
+  });
 }
 
-// var admin = new User("admin","admin@admin.com","admin");
-// if(localStorage.getItem("user") == null)
-//   createSession(admin);
+function signupUser(){
+  document.getElementById('signup').addEventListener('submit',(e)=>{
+    e.preventDefault();
+    getInfo();
+    async function getInfo(){
+      var response;
+      await fetch('/ketari/src/php/datain.php',{
+        method: 'POST',
+        body: new FormData(document.getElementById('signup'))
+      })
+      .then(res => res.text())
+      .then(data => response = data)
+      if(response =="Successful"){
+        alert("Account Created Successfully!");
+      }
+      else
+        alert("Account already exists!");
+    }
 
-let logArr = [];
-    logArr=getCookie("user");
-    logArr=JSON.parse(logArr);
+  })
+}
 
 function validateLogin(){
   let username = document.forms["Login"]["LoginUsername"].value;
@@ -38,14 +67,9 @@ function validateLogin(){
   else
     document.getElementById("passError").innerHTML = "";
 
-  for(var i = 0; i < logArr.length; i++){
-    if(logArr[i].username == username && logArr[i].password == password){
-      createLoggedSession(logArr[i]);
-      return true;
-    }
-  }
+  loginUser();
 
-  alert("No Account Found. please try again!");
+  // alert("No Account Found. please try again!");
   return false;
 }
 
@@ -89,71 +113,9 @@ function validateSignup(){
   else
     document.getElementById("cPasswordError").innerHTML = "";
 
-  // alert(logArr[0].username);
 
-  for(var i = 0; i < logArr.length; i++){
-    if(logArr[i].username == username){
-      alert("Username already exists!");
-      return false;
-    }
-  }
-  // var obj = new User(username,email,password);
-
-  // createSession(obj);
+  signupUser();
   
+  // toggleForm();
   return true;
-}
-
-// function createSession(obj){
-//   let arr = [];
-//   if(localStorage.getItem("user") != null)
-//     arr = JSON.parse(localStorage.getItem("user"));
-  
-//   arr.push(obj);
-//   localStorage.setItem("user",JSON.stringify(arr));
-// }
-function createLoggedSession(logArr){
-  delete logArr.password;
-  LogArr=JSON.parse(localStorage.getItem("loggedUser"));
-  if(LogArr==null){
-    LogArr=[];
-  }
-  LogArr.push(logArr);
-  localStorage.setItem("loggedUser",JSON.stringify(LogArr));
-}
-
-//cookie data
-function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  let expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-    user = prompt("Please enter your name:", "");
-    if (user != "" && user != null) {
-      setCookie("username", user, 365);
-    }
-  }
 }
