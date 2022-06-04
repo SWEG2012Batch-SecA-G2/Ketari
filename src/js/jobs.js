@@ -1,6 +1,7 @@
+document.getElementById('loggedUser').innerHTML=localStorage.getItem('loggedUser');
+var jobs = [];
 
-
-let jobs = JSON.parse(localStorage.getItem("jobs"));
+// console.log(jobs);
 
 let searchHistory = [];
 
@@ -56,9 +57,17 @@ function createHTML(logo, company, location, jobRole, jobType, jobDescription){
 
 // Function to insert jobs from the jobs list
 function insertJobs(){ 
-    for(var i = 0;  i < jobs.length; i++){
-        createHTML(jobs[i]["logo"], jobs[i]["company"], jobs[i]["location"], jobs[i]["jobRole"], jobs[i]["jobType"], jobs[i]["description"]);        
-    }               
+    
+    fetch('/ketari/src/php/jobOut.php',{
+        method: 'POST'
+    }).then(res=>res.json()).then(data=>{
+        jobs = data;
+        // alert(jobs);
+        console.log(jobs);
+        for(var i = 0;  i < jobs.length; i++){
+            createHTML(jobs[i]["logo"], jobs[i]["company"], jobs[i]["location"], jobs[i]["jobRole"], jobs[i]["jobType"], jobs[i]["description"]);        
+        }  
+    })             
 }
 
 

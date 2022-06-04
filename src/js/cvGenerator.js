@@ -217,20 +217,20 @@ function storeForm() {
     localStorage.setItem("profiles",JSON.stringify(profiles));
   }
 
-  /*
-function showprofilesData(){
-  var loggedUser = JSON.parse(localStorage.getItem("loggedUser"))
-  var profile = JSON.parse(localStorage.getItem("profiles"));
-  if (loggedUser == null) {
-    return alert("login first");
-  }else{
-    for(var i = 0; i < profile.length; i++){
-      if(profile[i].username == loggedUser.username){
-        return profile[i].age;
-      }
-    }
-    document.getElementById("hello").innerHTML = showprofilesData();
-}
-}
-*/
+
+// function showprofilesData(){
+//   var loggedUser = localStorage.getItem("loggedUser");
+//   var profile = JSON.parse(localStorage.getItem("profiles"));
+//   if (loggedUser == null) {
+//     return alert("login first");
+//   }else{
+//     for(var i = 0; i < profile.length; i++){
+//       if(profile[i].username == loggedUser.username){
+//         return profile[i].age;
+//       }
+//     }
+//     document.getElementById("hello").innerHTML = showprofilesData();
+//     }
+// }
+
 

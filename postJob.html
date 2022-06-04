@@ -67,8 +67,8 @@
                         <input id="description" type="text" placeholder="description" required>
                         <span class="error" id="descriptionErr"></span>
                     </div>
-                    <input id="submitJobBtn" onclick="return postJob()" type="submit" value="Submit New Job" >
-                    <button id="undoSubmissionBtn" onclick="undoPostJob()"> Undo </button>
+                    <input id="submitJobBtn" onclick="postJob(event)" type="submit" value="Submit New Job" >
+                    <button id="undoSubmissionBtn" onclick="undoPostJob(event)"> Undo </button>
                     </div>
                 </form>
             </div>
