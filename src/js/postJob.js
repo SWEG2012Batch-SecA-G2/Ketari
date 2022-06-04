@@ -1,5 +1,6 @@
 
-function postJob(){
+function postJob(e){
+
     let companyLogo = document.getElementById("companyLogo").value;
     let companyName = document.getElementById("companyName").value;
     let location = document.getElementById("location").value;
@@ -54,43 +55,56 @@ function postJob(){
     }
     else
         document.getElementById("descriptionErr").innerHTML = "";
-    let newJobObj = {
+    let newJobObj = [{
         "logo": companyLogo,
         "company": companyName,
         "location": location,
         "jobRole": jobRole,
         "jobType": jobType,
         "description": description,
-    }
+    },];
+    const form = new FormData();
+    form.append('jobs',JSON.stringify(newJobObj))
 
-    // Add New Job to local storage
-    let oldJobsList = JSON.parse(localStorage.getItem("jobs"));
-    oldJobsList.push(newJobObj);
-    localStorage.clear();
-    localStorage.setItem("jobs", JSON.stringify(oldJobsList));
+    fetch('/ketari/src/php/jobIn.php',{
+        method: 'POST',
+        Headers: {
+            'Content-Type': 'application/json'
+        },
+        body: form
+        })
+        .then(res=>res.json())
+        .then(data=> data)
 
     // Show notification and undo button
     submitJobBtn.style.backgroundColor = "Green";
     submitJobBtn.value = "Posted!";
-    submitJobBtn.onclick = () => {};
-    undoSubmissionBtn.style.display = "block"; 
+    undoSubmissionBtn.style.display = "block";
+
+    e.preventDefault();
     
     return true;
 }
 
-function undoPostJob(){
+function undoPostJob(e){
+    e.preventDefault();
+
     let submitJobBtn = document.getElementById("submitJobBtn"); 
     let undoSubmissionBtn = document.getElementById("undoSubmissionBtn");
     
-    let oldJobsList = JSON.parse(localStorage.getItem("jobs"));
-    oldJobsList.pop();
-    localStorage.clear();
-    localStorage.setItem("jobs", JSON.stringify(oldJobsList));
-
     // Show notification and undo button
     submitJobBtn.style.backgroundColor = "#cf566a";
     submitJobBtn.value = "Submit New Job!";
     submitJobBtn.onclick = postJob;
     undoSubmissionBtn.style.display = "none";    
+
+    const form = new FormData();
+    form.append('delete',JSON.stringify([]));
+    fetch('/ketari/src/php/jobIn.php',{
+        method: 'POST',
+        body: form
+    }).then(res=>res.text()).then(data=> console.log(data));
+
+    e.preventDefault();
 }
 

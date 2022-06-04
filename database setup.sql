@@ -1,46 +1,13 @@
 --@block
-SELECT * from USER;
-
---@block
-DELETE from USER;
-
---@block
-DELETE FROM USER
-WHERE username="abelabebe";
-
---@block
--- DROP TABLE USER;
-CREATE TABLE user(
+CREATE DATABASE IF NOT EXISTS ketari;
+USE ketari;
+CREATE TABLE IF NOT EXISTS user(
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     PRIMARY KEY(username)
 );
-
-
---@block
-CREATE TABLE user(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
-
-
---@block
-SELECT * from job;
-
---@block
-DROP TABLE job;
-
---@block
-DELETE from job;
-
---@block
-DELETE from job ORDER BY id DESC LIMIT 1;
-
---@block
-CREATE TABLE job(
+CREATE TABLE IF NOT EXISTS job(
     id INT PRIMARY KEY AUTO_INCREMENT,
     logo VARCHAR(255) NOT NULL,
     company VARCHAR(255) NOT NULL,
@@ -49,9 +16,7 @@ CREATE TABLE job(
     jobType VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL
 );
-
---@block
-CREATE TABLE cv(
+CREATE TABLE IF NOT EXISTS cv(
     id INT PRIMARY KEY AUTO_INCREMENT,
     fname VARCHAR(255) NOT NULL,
     lname VARCHAR(255) NOT NULL,
@@ -89,9 +54,3 @@ CREATE TABLE cv(
     tReferenceName VARCHAR(255),
     tReferencePhone VARCHAR(255)
 );
-
---@block
-SELECT * from cv;
-
---@block
-DELETE from cv;

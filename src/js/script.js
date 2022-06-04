@@ -14,18 +14,17 @@ function loginUser(e){
     getInfo();
     async function getInfo(){
       var response;
-      await fetch('/ketari/src/php/dataOut.php',{
+      await fetch('/ketari/src/php/userOut.php',{
         method: 'POST',
         body: new FormData(document.getElementById('login'))
       })
       .then(res => res.text())
-      .then(data => response = data)
-      if(response !=""){
+      .then(data => response = data )
+      if(response !==""){
         localStorage.setItem("loggedUser",response);
-        // alert(response);
         window.location.href = "/ketari/jobs.html";
+        return;
       }
-      else
         alert("No Account Found. please try again!");
     }
 }
@@ -48,8 +47,6 @@ function validateLogin(e){
     document.getElementById("passError").innerHTML = "";
 
   loginUser(e);
-  // alert("No Account Found. please try again!");
-  return false;
 }
 
 function signupUser(e){
@@ -57,13 +54,13 @@ function signupUser(e){
     getInfo();
     async function getInfo(){
       var response;
-      await fetch('/ketari/src/php/dataIn.php',{
+      await fetch('/ketari/src/php/userIn.php',{
         method: 'POST',
         body: new FormData(document.getElementById('signup'))
       })
       .then(res => res.text())
       .then(data => response = data)
-      if(response =="Successful"){
+      if(response =="Success"){
         toggleForm();
         alert("Account Created Successfully!");
       }

@@ -11,7 +11,7 @@
 
     $conn=new mysqli($servername,$username,$password,$dbname);
 
-    if($_POST['from-save']){
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
         $fName=$_POST['fname'];
         $lName=$_POST['lname'];
         $num=$_POST['pnumber'];
@@ -24,12 +24,12 @@
         $smedia=$_POST['smedia'];
         $jTitle=$_POST['jtitle'];
         $employer=$_POST['employer'];
-        $jobStart=$_POST['jobStartDate'];
-        $jobEnd=$_POST['jobEndDate'];
+        // $jobStart=$_POST['jobStartDate'];
+        // $jobEnd=$_POST['jobEndDate'];
         $schoolName=$_POST['schoolName'];
         $schoolLocation=$_POST['slocation'];
-        $schoolStart=$_POST['schoolStartDate'];
-        $schoolEnd=$_POST['schoolEndDate'];
+        // $schoolStart=$_POST['schoolStartDate'];
+        // $schoolEnd=$_POST['schoolEndDate'];
         $degree=$_POST['degree'];
         $skill=array();
         array_push($skill,$_POST['skill1']);
@@ -51,7 +51,7 @@
         array_push($RefPhone,$_POST['fRefPhone']);
         array_push($RefPhone,$_POST['sRefPhone']);
         array_push($RefPhone,$_POST['tRefPhone']);
-    }
 
-    $sql="INSERT INTO cv VALUES('$fName','$lName','$num','$age','$profession','$city','$region','$country','$zcode','$smedia','$jTitle','$employer','$jobStart','$jobEnd','$schoolName','$schoolLocation','$schoolStart','$schoolEnd','$degree','$skill[0]','$skillLevel[0]','$skill[1]','$skillLevel[1]','$skill[2]','$skillLevel[2]','$flanguage','$flanglevel','$slanguage','$slanglevel','$RefName','$RefPhone')";
+        $sql="INSERT INTO cv VALUES('$fName','$lName','$num','$age','$profession','$city','$region','$country','$zcode','$smedia','$jTitle','$employer','$jobStart','$jobEnd','$schoolName','$schoolLocation','$schoolStart','$schoolEnd','$degree','$skill[0]','$skillLevel[0]','$skill[1]','$skillLevel[1]','$skill[2]','$skillLevel[2]','$flanguage','$flanglevel','$slanguage','$slanglevel','$RefName','$RefPhone')";
+    }
 ?>
