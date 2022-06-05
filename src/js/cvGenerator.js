@@ -116,9 +116,9 @@ function validate() {
         return false;
     }
 }
-function storeForm() {
+function storeForm(e) {
     var form = document.forms["myForm"];
-    var person = JSON.parse(localStorage.getItem("loggedUser"))
+    var person = localStorage.getItem("loggedUser");
     var username="";
     if (person == null) {
       return alert("login first");
@@ -127,7 +127,6 @@ function storeForm() {
     }
     var fname = form["fname"].value;
     var lname = form["lname"].value;
-    console.log(fname);
     var pnumber = form["pnumber"].value;
     var age = form["age"].value;
     var profession = form["profession"].value;
@@ -162,7 +161,7 @@ function storeForm() {
     var tRefName = form["tRefName"].value;
     var tRefPhone = form["tRefPhone"].value;
     var data = {
-      username:username,
+      user:localStorage.getItem('loggedUser'),
       fname: "",
       lname: "",
       pnumber: "",
@@ -206,31 +205,27 @@ function storeForm() {
     data.sRefPhone = sRefPhone;
     data.tRefName = tRefName;
     data.tRefPhone = tRefPhone;
-    let profiles=[];
-    if(localStorage.getItem("profiles")===null){
-      profiles=[];
-    }
-    else{
-      profiles=JSON.parse(localStorage.getItem("profiles"));
-    }
-    profiles.push(data);
-    localStorage.setItem("profiles",JSON.stringify(profiles));
+    // let profiles=[];
+    // if(localStorage.getItem("profiles")===null){
+    //   profiles=[];
+    // }
+    // else{
+    //   profiles=JSON.parse(localStorage.getItem("profiles"));
+    // }
+    // profiles.push(data);
+    // localStorage.setItem("profiles",JSON.stringify(profiles));
+
+    var form=new FormData();
+    form.append('cv',JSON.stringify(data));
+
+    fetch('/ketari/src/php/cv.php',{
+        method: 'POST',
+        body: form
+    }).then(res=>res.text()).then(data=>{if(data==="success"){alert("CV Uploaded Successfully");}
+        else if(data==="fail"){alert("CV Upload Failed");}
+        else{alert('CV already exists');}});
+    e.preventDefault();
   }
 
-
-// function showprofilesData(){
-//   var loggedUser = localStorage.getItem("loggedUser");
-//   var profile = JSON.parse(localStorage.getItem("profiles"));
-//   if (loggedUser == null) {
-//     return alert("login first");
-//   }else{
-//     for(var i = 0; i < profile.length; i++){
-//       if(profile[i].username == loggedUser.username){
-//         return profile[i].age;
-//       }
-//     }
-//     document.getElementById("hello").innerHTML = showprofilesData();
-//     }
-// }
 
 

@@ -62,6 +62,7 @@ function postJob(e){
         "jobRole": jobRole,
         "jobType": jobType,
         "description": description,
+        "user": localStorage.getItem('loggedUser'),
     },];
     const form = new FormData();
     form.append('jobs',JSON.stringify(newJobObj))

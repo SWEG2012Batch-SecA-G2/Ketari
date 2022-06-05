@@ -17,6 +17,15 @@ CREATE TABLE user(
     PRIMARY KEY(username)
 );
 
+--@block
+CREATE TABLE IF NOT EXISTS cvv(
+    fname VARCHAR(225),
+    lname VARCHAR(225)
+);
+
+--@block
+SELECT * FROM cvv;
+
 
 --@block
 CREATE TABLE user(
@@ -47,12 +56,16 @@ CREATE TABLE job(
     location VARCHAR(255) NOT NULL,
     jobRole VARCHAR(255) NOT NULL,
     jobType VARCHAR(255) NOT NULL,
-    description VARCHAR(255) NOT NULL
+    description VARCHAR(255) NOT NULL,
+    user VARCHAR(255) NOT NULL
 );
 
 --@block
+DROP TABLE cv;
+
+--@block
 CREATE TABLE cv(
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    user VARCHAR(255) NOT NULL,
     fname VARCHAR(255) NOT NULL,
     lname VARCHAR(255) NOT NULL,
     num INT NOT NULL,

@@ -12,46 +12,23 @@
     $conn=new mysqli($servername,$username,$password,$dbname);
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $fName=$_POST['fname'];
-        $lName=$_POST['lname'];
-        $num=$_POST['pnumber'];
-        $age=$_POST['age'];
-        $profession=$_POST['profession'];
-        $city=$_POST['city'];
-        $region=$_POST['region'];
-        $country=$_POST['country'];
-        $zcode=$_POST['zcode'];
-        $smedia=$_POST['smedia'];
-        $jTitle=$_POST['jtitle'];
-        $employer=$_POST['employer'];
-        // $jobStart=$_POST['jobStartDate'];
-        // $jobEnd=$_POST['jobEndDate'];
-        $schoolName=$_POST['schoolName'];
-        $schoolLocation=$_POST['slocation'];
-        // $schoolStart=$_POST['schoolStartDate'];
-        // $schoolEnd=$_POST['schoolEndDate'];
-        $degree=$_POST['degree'];
-        $skill=array();
-        array_push($skill,$_POST['skill1']);
-        array_push($skill,$_POST['skill2']);
-        array_push($skill,$_POST['skill3']);
-        $skillLevel=array();
-        array_push($skillLevel,$_POST['skillLevel1']);
-        array_push($skillLevel,$_POST['skillLevel2']);
-        array_push($skillLevel,$_POST['skillLevel3']);
-        $flanguage=$_POST['flanguage'];
-        $flanglevel=$_POST['flanglevel'];
-        $slanguage=$_POST['slanguage'];
-        $slanglevel=$_POST['slanglevel'];
-        $RefName=array();
-        array_push($RefName,$_POST['fRefName']);
-        array_push($RefName,$_POST['sRefName']);
-        array_push($RefName,$_POST['tRefName']);
-        $RefPhone=array();
-        array_push($RefPhone,$_POST['fRefPhone']);
-        array_push($RefPhone,$_POST['sRefPhone']);
-        array_push($RefPhone,$_POST['tRefPhone']);
-
-        $sql="INSERT INTO cv VALUES('$fName','$lName','$num','$age','$profession','$city','$region','$country','$zcode','$smedia','$jTitle','$employer','$jobStart','$jobEnd','$schoolName','$schoolLocation','$schoolStart','$schoolEnd','$degree','$skill[0]','$skillLevel[0]','$skill[1]','$skillLevel[1]','$skill[2]','$skillLevel[2]','$flanguage','$flanglevel','$slanguage','$slanglevel','$RefName','$RefPhone')";
+        if(isset($_POST['cv'])){
+            $cv=json_decode($_POST['cv']);
+            $sql="INSERT INTO cv VALUES('$cv->user','$cv->fname','$cv->lname','$cv->pnumber','$cv->age','$cv->profession','$cv->city','$cv->region','$cv->country','$cv->zcode','$cv->smedia','$cv->jtitle','$cv->employer','$cv->jobStartDate','$cv->jobEndDate','$cv->schoolName','$cv->slocation','$cv->schoolStartDate','$cv->schoolEndDate','$cv->degree','$cv->skill1','$cv->skillLevel1','$cv->skill2','$cv->skillLevel2','$cv->skill3','$cv->skillLevel3','$cv->flanguage','$cv->fLangLevel','$cv->slanguage','$cv->sLangLevel','$cv->fRefName','$cv->fRefPhone','$cv->sRefName','$cv->sRefPhone','$cv->tRefName','$cv->tRefPhone')";
+            if($rows=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM cv WHERE user='$cv->user'"))<1){ 
+                if(mysqli_query($conn,$sql))
+                    echo 'success';
+                else
+                    echo 'fail';
+            }
+            else
+                echo 'duplicate';
+        }
+        if(isset($_POST['profile'])){
+            $user=$_POST['profile'];
+            $sql="SELECT * FROM cv WHERE user='$user'";
+            $result=mysqli_query($conn,$sql);
+            echo json_encode(mysqli_fetch_assoc($result));
+        }
     }
 ?>

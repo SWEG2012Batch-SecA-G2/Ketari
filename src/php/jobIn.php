@@ -18,7 +18,7 @@
             $id = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM JOB"))+1;
 
             foreach($jobs as $job){
-                $sql="INSERT INTO JOB VALUES ('$id','$job->logo','$job->company','$job->location','$job->jobRole','$job->jobType','$job->description')";
+                $sql="INSERT INTO JOB VALUES ('$id','$job->logo','$job->company','$job->location','$job->jobRole','$job->jobType','$job->description','$job->user')";
                 $checkSql="SELECT * FROM JOB WHERE company='$job->company' AND location='$job->location' AND jobRole='$job->jobRole' AND jobType='$job->jobType' AND description='$job->description'";
                 
                 if(mysqli_num_rows(mysqli_query($conn,$checkSql)) == 0){
