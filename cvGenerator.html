@@ -14,7 +14,6 @@
       <!-- Nav Links -->
       <nav>
         <ul>
-          <li> <a href="landing.html"> Home </a> </li>
           <li> <a href="jobs.html" > Jobs </a> </li>
           <li> <a href="postJob.html"> Post a Job </a> </li>
           <li> <a href="profiles.html"> Profile </a> </li>
@@ -52,7 +51,7 @@
           <p>Please enter the required information to proceed.</p>
         </div>
 
-        <form action="src/php/cv.php" name="myForm" onsubmit="return validate()" >
+        <form name="myForm">
           <div>
             <div class="input-section-wrapper">
               <h3 class="input-title">Profile</h3>
@@ -157,7 +156,7 @@
             </div>
           </div>
 
-          <button class="form-save" type="submit" onclick="storeForm()">SAVE</button>
+          <button class="form-save" type="submit" onclick="storeForm(event)">SAVE</button>
         </form>
       </div>
     </body>

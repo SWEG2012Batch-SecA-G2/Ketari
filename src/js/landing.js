@@ -34,6 +34,7 @@ let jobs = [
         "jobRole": "Fullstack Developer",
         "jobType": "Full-Time",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/lifan.png",
@@ -42,6 +43,7 @@ let jobs = [
         "jobRole": "Graphic Designer",
         "jobType": "Internship",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/century.png",
@@ -50,6 +52,7 @@ let jobs = [
         "jobRole": "IOS Developer",
         "jobType": "Student",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/cropped-Dashen-Bank-sc-Logo-Square.jpg",
@@ -58,6 +61,7 @@ let jobs = [
         "jobRole": "Android Developer",
         "jobType": "Part-Time",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/ride.png",
@@ -66,6 +70,7 @@ let jobs = [
         "jobRole": "IOS Developer",
         "jobType": "Full-Time",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/ethioTelecom.png",
@@ -74,6 +79,7 @@ let jobs = [
         "jobRole": "Graphic Designer",
         "jobType": "Part-Time",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/ethiopianAirport.png",
@@ -82,6 +88,7 @@ let jobs = [
         "jobRole": "Android Developer",
         "jobType": "Freelance",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/cbe.png",
@@ -90,6 +97,7 @@ let jobs = [
         "jobRole": "Fullstack Developer",
         "jobType": "Full-Time",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
     {
         "logo": "assets/icons/ebc.png",
@@ -98,6 +106,7 @@ let jobs = [
         "jobRole": "IOS Developer",
         "jobType": "Part-Time",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum impedit voluptatum unde, sint molestiae recusandae voluptatibus culpa sequi. Obcaecati mollitia delectus non. Ut a quis et repellendus sit quasi?",
+        "user": "admin",
     },
 
 ];
