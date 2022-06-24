@@ -69,9 +69,6 @@ function postJob(e){
 
     fetch('/ketari/src/php/jobIn.php',{
         method: 'POST',
-        Headers: {
-            'Content-Type': 'application/json'
-        },
         body: form
         })
         .then(res=>res.json())

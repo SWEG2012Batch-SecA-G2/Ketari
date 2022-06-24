@@ -18,8 +18,8 @@
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-        $user=$_POST['LoginUsername'];
-        $pass=$_POST['LoginPassword'];
+        $user=htmlspecialchars($_POST['LoginUsername']);
+        $pass=md5(htmlspecialchars($_POST['LoginPassword']));
         $sql="SELECT * FROM USER WHERE username='$user' AND password='$pass'";
         $result=mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)!=0){

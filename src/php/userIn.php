@@ -17,9 +17,9 @@
     }
     
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $newUser=$_POST['SignupUsername'];
-        $newEmail=$_POST['SignupEmail'];
-        $newPass=$_POST['SignupPassword'];
+        $newUser=htmlspecialchars($_POST['SignupUsername']);
+        $newEmail=htmlspecialchars($_POST['SignupEmail']);
+        $newPass=md5(htmlspecialchars($_POST['SignupPassword']));
         $sql="INSERT INTO USER(username,email,password) VALUES('$newUser','$newEmail','$newPass')";
         if(mysqli_query($conn,$sql)){
             echo "Success";
