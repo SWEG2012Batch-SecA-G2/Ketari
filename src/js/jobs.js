@@ -61,16 +61,19 @@ function insertJobs(){
     fetch('/ketari/src/php/jobOut.php',{
         method: 'POST'
     }).then(res=>res.json()).then(data=>{
-        jobs = data;
         // alert(jobs);
-        console.log(jobs);
-        for(var i = 0;  i < jobs.length; i++){
-            createHTML(jobs[i]["logo"], jobs[i]["company"], jobs[i]["location"], jobs[i]["jobRole"], jobs[i]["jobType"], jobs[i]["description"]);        
+        // console.log("jobs--------");
+        // console.log(jobs);
+        for(var i = 0;  i < data.length; i++){
+            createHTML(data[i]["logo"], data[i]["company"], data[i]["location"], data[i]["jobRole"], data[i]["jobType"], data[i]["description"]);     
+            jobs.push(data[i]);
         }  
+        
     })             
 }
 
-
+console.log("jobs--------");
+        console.log(jobs);
 
 // Display Details
 function displayDetailsOfJob(logo, company, location, jobRole, jobType, jobDescription){
@@ -220,7 +223,7 @@ function searchJob(state){
     }
     amountOfFoundJobs = 0;
     for(var i = 0; i < jobs.length; i++){
-        if(jobs[i]["jobRole"].toLowerCase().includes(searchedTerm.toLowerCase()) && jobs[i]["location"].toLowerCase().includes(searchedLocation.toLowerCase()) ){
+        if(jobs[i]["company"].toLowerCase().includes(searchedTerm.toLowerCase())||jobs[i]["jobRole"].toLowerCase().includes(searchedTerm.toLowerCase()) && jobs[i]["location"].toLowerCase().includes(searchedLocation.toLowerCase()) ){
            /* if(fullTimeFilter == true){
                 jobs[i]["jobType"] == "Full-Time";
                 createHTML(jobs[i]["logo"], jobs[i]["company"], jobs[i]["location"], jobs[i]["jobRole"], jobs[i]["jobType"]);
