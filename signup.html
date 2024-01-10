@@ -112,39 +112,58 @@
           </div>
           
         </div>
-      <!-- Sign Up -->
-      <div class="user signupBx">
+        
+        <!-- Sign Up -->
+        <div class="user signupBx">
           <div class="formBx">
-
-            <form id="signup" name="Signup" onsubmit="return validateSignup(event);">
+            <form
+              id="signup"
+              name="Signup"
+              onsubmit="return validateSignup(event);"
+            >
               <h2>Create an account</h2>
               <input type="text" name="SignupUsername" placeholder="Username" />
               <span id="nameError" class="error"></span>
-              <input type="email" name="SignupEmail" placeholder="Email Address" />
+              <input
+                type="email"
+                name="SignupEmail"
+                placeholder="Email Address"
+              />
               <span id="emailError" class="error"></span>
-              <input type="password" name="SignupPassword" placeholder="Create Password" />
+              <input
+                type="password"
+                name="SignupPassword"
+                placeholder="Create Password"
+              />
               <span id="passwordError" class="error"></span>
-              <input type="password" name="SignupCPassword" placeholder="Confirm Password" />
+              <input
+                type="password"
+                name="SignupCPassword"
+                placeholder="Confirm Password"
+              />
               <span id="cPasswordError" class="error"></span>
+              <input type="phone" name="SignupPhone" placeholder="Phone" />
+              <span id="PhoneError" class="error"></span>
+              <input type="button" value="Request OTP" onclick="requestOTP()" />
+              <input type="text" name="SignupOTP" placeholder="Enter OTP" />
+              <span id="OTPError" class="error"></span>
               <input type="submit" name="SignupSubmit" value="Sign Up" />
               <p class="signup">
                 Already have an account ?
-                <a href="#" onclick="toggleForm();">Sign in.</a>
+                <a href="#" onclick="toggleForm()">Sign in.</a>
               </p>
             </form>
-
           </div>
-          <div class="imgBx"><img src="assets/illustrations/undraw_Swipe_profiles_re_tvqm.png" alt="" /></div>
+          <div class="imgBx">
+            <img
+              src="assets/illustrations/undraw_Swipe_profiles_re_tvqm.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </section>
+    <!-- Ensure the correct path to your script file -->
     <script src="src/js/script.js"></script>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-          new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'am,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-      }
-  </script>
-  <script type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
