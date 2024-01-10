@@ -1,83 +1,97 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Ketari </title>
-        <link rel="stylesheet" href="src/styles/header and footer.css">
-        <link rel="stylesheet" href="src/styles/postJob.css">
-    </head>
-    <body>
-        <!-- Header and Nav Bar -->
-        <header>
-            <!-- Logo Image -->
-            <div>
-                <a href="jobs.html">
-                    <img id="logoImage" src="assets\logo\ketari-logos_white.png">
-                 </a> 
-            </div>
-            <!-- Nav Links -->
-            <nav>
-                <ul>
-                    <li> <a href="jobs.html"> Jobs </a> </li>
-                    <li> <a href="Profiles.html"> Profile </a> </li>
-                    <li> <a href="landing.html"> Sign Out </a> </li>
-                </ul>
-            </nav>
-            <!-- Banner Texts -->
-            <div id="intro">
-                <h1> Find Incredible Talent </h1>
-                <h5> Search for a qualified employee </h5>
-                <p style="color: transparent;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium molestias rem voluptatem sint! Quisquam vitae minus beatae aperiam, corrupti, dolores obcaecati, fugiat quia perferendis harum autem repellendus magnam. Consequuntur, repudiandae.</p>
-            </div>
-            <!-- Banner Image -->
-            <div>
-                <img id="bannerImage" src="assets\illustrations\undraw_Group_hangout_re_4t8r.png">
-            </div>            
-        </header>
+
+<head>
+    <title> Ketari </title>
+    <link rel="stylesheet" href="src/styles/header and footer.css">
+    <link rel="stylesheet" href="src/styles/postJob.css">
+</head>
+
+<body>
+    <!-- Header and Nav Bar -->
+    <header>
+        <!-- Logo Image -->
+        <div>
+            <a href="jobs.html">
+                <img id="logoImage" src="assets\logo\ketari-logos_white.png">
+            </a>
+        </div>
+        <!-- Nav Links -->
+        <nav>
+            <ul>
+                <li> <a href="jobs.html"> Jobs </a> </li>
+                <li> <a href="Profiles.html"> Profile </a> </li>
+                <li> <a href="landing.html"> Sign Out </a> </li>
+                <div id="google_translate_element" class="google-translate"></div>
+            </ul>
+        </nav>
+        <!-- Banner Texts -->
+        <div id="intro">
+            <h1> Find Incredible Talent </h1>
+            <h5> Search for a qualified employee </h5>
+            <p style="color: transparent;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                molestias rem voluptatem sint! Quisquam vitae minus beatae aperiam, corrupti, dolores obcaecati, fugiat
+                quia perferendis harum autem repellendus magnam. Consequuntur, repudiandae.</p>
+        </div>
+        <!-- Banner Image -->
+        <div>
+            <img id="bannerImage" src="assets\illustrations\undraw_Group_hangout_re_4t8r.png">
+        </div>
+    </header>
 
 
-        <!--  
+    <!--  
             
             INSERT CONTENT HERE 
         
         -->
-        <!-- -->
+    <!-- -->
 
-        <div id="newJobPostForm">
+    <div id="newJobPostForm">
 
-            <h1> Post A Job </h1>
-            <h3> Please fill out all the required inputs in the form!</h3>
+        <h1> Post A Job </h1>
+        <h3> Please fill out all the required inputs in the form!</h3>
 
-            <div id="newJobPostInputs">
-                <form >
-                    <div id="inputSubContainer">
-                        <h3> About Company </h3>
-                        <input id="companyLogo" type="text" placeholder="link to company logo" required>
-                        <span class="error" id="logoErr"></span>
-                        <input id="companyName" type="text" placeholder="company name" required>
-                        <span class="error" id="nameErr"></span>
-                        <input id="location" type="text" placeholder="location" required>
-                        <span class="error" id="locationErr"></span>
-                    </div>
-                    <div id="inputSubContainer">
-                        <h3> About Job </h3>
-                        <input id="jobRole" type="text" placeholder="job role" required>
-                        <span class="error" id="roleErr"></span>
-                        <input id="jobType" type="text" placeholder="job type" required>
-                        <span class="error" id="typeErr"></span>
-                        <input id="description" type="text" placeholder="description" required>
-                        <span class="error" id="descriptionErr"></span>
-                    </div>
-                    <input id="submitJobBtn" onclick="postJob(event)" type="submit" value="Submit New Job" >
-                    <button id="undoSubmissionBtn" onclick="undoPostJob(event)"> Undo </button>
-                    </div>
-                </form>
-            </div>
+        <div id="newJobPostInputs">
+            <form>
+                <div id="inputSubContainer">
+                    <h3> About Company </h3>
+                    <input id="companyLogo" type="text" placeholder="link to company logo" required>
+                    <span class="error" id="logoErr"></span>
+                    <input id="companyName" type="text" placeholder="company name" required>
+                    <span class="error" id="nameErr"></span>
+                    <input id="location" type="text" placeholder="location" required>
+                    <span class="error" id="locationErr"></span>
+                </div>
+                <div id="inputSubContainer">
+                    <h3> About Job </h3>
+                    <input id="jobRole" type="text" placeholder="job role" required>
+                    <span class="error" id="roleErr"></span>
+                    <input id="jobType" type="text" placeholder="job type" required>
+                    <span class="error" id="typeErr"></span>
+                    <input id="description" type="text" placeholder="description" required>
+                    <span class="error" id="descriptionErr"></span>
+                </div>
+                <input id="submitJobBtn" onclick="postJob(event)" type="submit" value="Submit New Job">
+                <button id="undoSubmissionBtn" onclick="undoPostJob(event)"> Undo </button>
+        </div>
+        </form>
+    </div>
 
-        
-        <!-- Footer -->
-        <footer>
-            <p>Ketari &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved!</p>        </footer>
 
-        <script src="src/js/postJob.js"></script>
-    </body>
+    <!-- Footer -->
+    <footer>
+        <p>Ketari &copy;
+            <script>document.write(new Date().getFullYear());</script> All Rights Reserved!
+        </p>
+    </footer>
+
+    <script src="src/js/postJob.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'am,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+      </script>
+</body>
+
 </html>
