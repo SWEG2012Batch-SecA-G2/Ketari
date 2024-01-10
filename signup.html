@@ -1,34 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles/signUp.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles/signUp.css" />
     <title>Signup</title>
-</head>
-<body>
+    <!-- Add this script in the <head> section of your HTML file -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
     <section>
-      <!-- Login  -->
+      <!-- Login -->
       <div class="container">
         <div class="user signinBx">
-          <div class="imgBx"><img src="assets/illustrations/undraw_enter_uhqk.png" alt="" /></div>
+          <div class="imgBx">
+            <img src="assets/illustrations/undraw_enter_uhqk.png" alt="" />
+          </div>
           <div class="formBx">
+            
+            <script>
+              // Declare googleUser in the global scope
+              let googleUser;
 
-            <form id="login" name="Login" onsubmit="return validateLogin(event); ">
+              function signInWithGoogle() {
+                gapi.load("auth2", function () {
+                  gapi.auth2
+                    .init({
+                      client_id:
+                        "872592984441-r6j64e19p69blelg9vv937u5b1fo3214.apps.googleusercontent.com",
+                      plugin_name: "SimpleWebApp",
+                    })
+                    .then(function () {
+                      const auth2 = gapi.auth2.getAuthInstance();
+                      auth2.signIn().then(function (user) {
+                        // Assign the signed-in user to the global variable
+                        googleUser = user;
+                        const idToken = user.getAuthResponse().id_token;
+                        // Send the idToken to the server for verification
+                        sendTokenToServer(idToken);
+                      });
+                    });
+                });
+              }
+
+              function sendTokenToServer(idToken) {
+                if (!googleUser) {
+                  console.error("googleUser is not defined.");
+                  return;
+                }
+
+                const profile = googleUser.getBasicProfile();
+                const name = profile.getName();
+                const email = profile.getEmail();
+                console.log("Sending token to server...");
+                console.log("idToken: " + idToken.substr(0, 25));
+                console.log("name: " + name);
+                console.log("email: " + email);
+
+                // Send user data to the PHP server for storage
+                fetch("/ketari/store-user.php", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ idToken, name, email }),
+                })
+                  .then((response) => response.json())
+                  .then((data) => {
+                    // Handle the server response
+                    console.log("Data: ",data);
+                    if (data.status === "success") {
+                      // Redirect to the home page or update this URL as needed
+                      localStorage.setItem("loggedUser", data.user.name);
+                    console.log("status: ",data.message);
+                      window.location.href = "/ketari/jobs.html";
+                    } else {
+                      // Handle the error, e.g., display an error message
+                      console.error("Error storing user data:", data.message);
+                    }
+                  })
+                  .catch((error) => console.error("Error:", error));
+              }
+            </script>
+            <form
+              id="login"
+              name="Login"
+              onsubmit="return validateLogin(event);"
+            >
               <h2>Sign In</h2>
               <input type="text" name="LoginUsername" placeholder="Username" />
               <span id="usernameError" class="error"></span>
-              <input type="password" name="LoginPassword" placeholder="Password" />
+              <input
+                type="password"
+                name="LoginPassword"
+                placeholder="Password"
+              />
               <span id="passError" class="error"></span>
               <input type="submit" name="LoginSubmit" value="Login" />
               <p class="signup">
+                <button onclick="signInWithGoogle()" type="button" class="login-with-google-btn" >
+                  Sign in with Google
+                </button>
+                <br />
+                <br />
                 Don't have an account ?
                 <a href="#" onclick="toggleForm();">Sign Up.</a>
               </p>
             </form>
-
+            
           </div>
+          
         </div>
       <!-- Sign Up -->
       <div class="user signupBx">
